@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ganesh Towers | Apartments</title>
+  <meta name="description" content="Explore apartments for rent and sale at Ganesh Towers, Anaparthi.">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      color: #243047;
+      background: #f5f7fb;
+      line-height: 1.6;
+    }
+    header {
+      background: #142b4a;
+      color: white;
+      padding: 24px 18px;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 32px; }
+    nav { margin-top: 12px; }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    .hero {
+      padding: 70px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #dce9f8, #f5f7fb);
+    }
+    .hero h2 { font-size: 36px; margin: 0 0 10px; }
+    .btn {
+      display: inline-block;
+      background: #16764a;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 7px;
+      text-decoration: none;
+      margin: 8px 5px;
+    }
+    main { max-width: 1000px; margin: auto; padding: 24px 16px; }
+    section {
+      background: white;
+      padding: 24px;
+      margin: 20px 0;
+      border-radius: 12px;
+      box-shadow: 0 3px 14px #0000000a;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      border: 1px solid #e0e6ef;
+      padding: 18px;
+      border-radius: 10px;
+    }
+    footer {
+      background: #142b4a;
+      color: white;
+      text-align: center;
+      padding: 22px;
+    }
+    @media (max-width: 500px) {
+      .hero h2 { font-size: 28px; }
+      header h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Ganesh Towers</h1>
+    <p>Your place to call home</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#flats">Flats</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <h2>Find Your New Home</h2>
+    <p>Explore apartment options for rent or sale.</p>
+    <p><strong>Anaparthi, Andhra Pradesh</strong></p>
+    <a class="btn" href="#flats">Explore Flats</a>
+    <a class="btn" href="#contact">Contact Us</a>
+  </div>
+
+  <main>
+    <section id="about">
+      <h2>About Our Apartment</h2>
+      <p>
+        Welcome to Ganesh Towers. Discover apartment options
+        and get in touch with us for availability, pricing and
+        property details.
+      </p>
+    </section>
+
+    <section id="flats">
+      <h2>Available Flats</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Flats for Rent</h3>
+          <p>Ask us about available flats, monthly rent and deposit.</p>
+          <a class="btn" href="#contact">Enquire Now</a>
+        </div>
+        <div class="card">
+          <h3>Flats for Sale</h3>
+          <p>Ask us about available properties and sale prices.</p>
+          <a class="btn" href="#contact">Enquire Now</a>
+        </div>
+      </div>
+      <p>Contact us for current availability and pricing.</p>
+    </section>
+
+    <section id="facilities">
+      <h2>Facilities</h2>
+      <div class="cards">
+        <div class="card">🏠 Comfortable living spaces</div>
+        <div class="card">📍 Convenient location</div>
+        <div class="card">🤝 Direct enquiries</div>
+      </div>
+      <p>Ask us about parking, water supply and other amenities.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Interested in renting or buying a flat? Contact us for details.</p>
+
+      <!-- Replace 91XXXXXXXXXX with your WhatsApp number -->
+      <a class="btn"
+         href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%20am%20interested%20in%20Ganesh%20Towers."
+         target="_blank" rel="noopener">
+        Enquire on WhatsApp
+      </a>
+
+      <p>Location: Anaparthi, Andhra Pradesh</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Ganesh Towers. All rights reserved.</p>
+  </footer>
+</body>
+</html>
