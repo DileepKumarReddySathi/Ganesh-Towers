@@ -1,152 +1,2890 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ganesh Towers | Apartments</title>
-  <meta name="description" content="Explore apartments for rent and sale at Ganesh Towers, Anaparthi.">
+  <title>Ganesh Towers | Premium 2 & 3 BHK Apartments for Rent & Sale in Anaparthi</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Discover premium living at Ganesh Towers, Anaparthi. Modern 2 & 3 BHK flats available for rent and sale. 100% Vastu compliant, lift, 24/7 power backup, covered parking, prime location.">
+  <meta name="keywords" content="Ganesh Towers, Ganesh Towers Anaparthi, flats for rent in Anaparthi, apartments for sale in Anaparthi, 2 BHK flat Anaparthi, 3 BHK apartment East Godavari">
+  <meta name="author" content="Ganesh Towers">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ganesh Towers | Luxury Living in Anaparthi">
+  <meta property="og:description" content="Modern 2 & 3 BHK apartments for Rent & Sale. 100% Vastu, covered parking, high-speed elevator, 24/7 security.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   <style>
-    * { box-sizing: border-box; }
-    body {
+    /* ==========================================================================
+       CSS VARIABLES & GLOBAL RESET
+       ========================================================================== */
+    :root {
+      --primary: #0b1a30;
+      --primary-light: #162c4e;
+      --primary-dark: #060e1b;
+      --accent-gold: #c9932a;
+      --accent-gold-hover: #e0a736;
+      --accent-gold-subtle: #fbf7ee;
+      --emerald: #10b981;
+      --emerald-dark: #059669;
+      --slate-50: #f8fafc;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-300: #cbd5e1;
+      --slate-600: #475569;
+      --slate-700: #334155;
+      --slate-800: #1e293b;
+      --slate-900: #0f172a;
+      --white: #ffffff;
+      
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.12), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --shadow-gold: 0 10px 25px -5px rgba(201, 147, 42, 0.35);
+
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-full: 9999px;
+
+      --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
       margin: 0;
-      font-family: Arial, sans-serif;
-      color: #243047;
-      background: #f5f7fb;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--slate-700);
+      background-color: var(--slate-50);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Outfit', sans-serif;
+      color: var(--slate-900);
+      line-height: 1.25;
+      font-weight: 700;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    /* Section Header Helper */
+    .section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 50px auto;
+    }
+
+    .badge-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(201, 147, 42, 0.12);
+      color: var(--accent-gold);
+      border: 1px solid rgba(201, 147, 42, 0.3);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-size: clamp(1.9rem, 3.5vw, 2.75rem);
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .section-subtitle {
+      font-size: 1.05rem;
+      color: var(--slate-600);
       line-height: 1.6;
     }
-    header {
-      background: #142b4a;
-      color: white;
-      padding: 24px 18px;
-      text-align: center;
-    }
-    header h1 { margin: 0; font-size: 32px; }
-    nav { margin-top: 12px; }
-    nav a {
-      color: white;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    .hero {
-      padding: 70px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #dce9f8, #f5f7fb);
-    }
-    .hero h2 { font-size: 36px; margin: 0 0 10px; }
+
+    /* Common Buttons */
     .btn {
-      display: inline-block;
-      background: #16764a;
-      color: white;
-      padding: 12px 20px;
-      border-radius: 7px;
-      text-decoration: none;
-      margin: 8px 5px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 13px 26px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      border: none;
+      transition: var(--transition);
+      white-space: nowrap;
     }
-    main { max-width: 1000px; margin: auto; padding: 24px 16px; }
-    section {
-      background: white;
-      padding: 24px;
-      margin: 20px 0;
-      border-radius: 12px;
-      box-shadow: 0 3px 14px #0000000a;
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--accent-gold-hover), var(--accent-gold));
+      color: var(--white);
+      box-shadow: var(--shadow-gold);
     }
-    .cards {
+
+    .btn-gold:hover {
+      background: linear-gradient(135deg, #ebaf3f, #b9841f);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px -4px rgba(201, 147, 42, 0.45);
+      color: var(--white);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border: 1.5px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--white);
+      transform: translateY(-2px);
+    }
+
+    .btn-dark {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .btn-dark:hover {
+      background: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .btn-whatsapp {
+      background: #25d366;
+      color: var(--white);
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.3);
+    }
+
+    .btn-whatsapp:hover {
+      background: #20ba59;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45);
+      color: var(--white);
+    }
+
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 0.85rem;
+      border-radius: var(--radius-sm);
+    }
+
+    /* ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== */
+    .top-bar {
+      background: var(--primary-dark);
+      color: #94a3b8;
+      font-size: 0.82rem;
+      padding: 7px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .top-bar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .top-bar-info {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .top-bar-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .top-bar-info i {
+      color: var(--accent-gold);
+    }
+
+    .header-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(11, 26, 48, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      transition: var(--transition);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 76px;
+    }
+
+    .brand-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--white);
+    }
+
+    .brand-icon {
+      width: 44px;
+      height: 44px;
+      background: linear-gradient(135deg, var(--accent-gold-hover), var(--accent-gold));
+      color: var(--white);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      box-shadow: 0 4px 14px rgba(201, 147, 42, 0.4);
+    }
+
+    .brand-text h1 {
+      font-size: 1.45rem;
+      color: var(--white);
+      letter-spacing: -0.2px;
+      margin: 0;
+    }
+
+    .brand-text span {
+      font-size: 0.75rem;
+      color: var(--accent-gold);
+      font-weight: 500;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      display: block;
+      margin-top: -2px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav-menu a {
+      color: #cbd5e1;
+      font-size: 0.92rem;
+      font-weight: 500;
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-menu a:hover,
+    .nav-menu a.active {
+      color: var(--accent-gold);
+    }
+
+    .nav-menu a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--accent-gold);
+      transition: var(--transition);
+    }
+
+    .nav-menu a:hover::after,
+    .nav-menu a.active::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: transparent;
+      border: none;
+      color: var(--white);
+      font-size: 1.6rem;
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    /* ==========================================================================
+       HERO SECTION
+       ========================================================================== */
+    .hero-section {
+      position: relative;
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, rgba(11, 26, 48, 0.92) 0%, rgba(15, 39, 68, 0.82) 60%, rgba(11, 26, 48, 0.95) 100%),
+                  url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1800&q=80') center/cover no-repeat;
+      color: var(--white);
+      padding: 90px 0 100px 0;
+      overflow: hidden;
+    }
+
+    .hero-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(201, 147, 42, 0.2);
+      border: 1px solid rgba(201, 147, 42, 0.5);
+      color: #ffd885;
+      padding: 7px 16px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 22px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero-title {
+      font-size: clamp(2.4rem, 4.2vw, 3.8rem);
+      color: var(--white);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      letter-spacing: -0.8px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, #ffd987, #e0a736);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-desc {
+      font-size: 1.12rem;
+      color: #e2e8f0;
+      max-width: 580px;
+      margin-bottom: 30px;
+      line-height: 1.7;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 34px;
+    }
+
+    .hero-tag-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 6px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: #f1f5f9;
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-tag-item i {
+      color: var(--accent-gold);
+    }
+
+    .hero-cta-group {
+      display: flex;
+      flex-wrap: wrap;
       gap: 16px;
     }
-    .card {
-      border: 1px solid #e0e6ef;
-      padding: 18px;
-      border-radius: 10px;
+
+    /* Hero Quick Enquiry Card */
+    .hero-card {
+      background: rgba(255, 255, 255, 0.98);
+      color: var(--slate-800);
+      padding: 34px 30px;
+      border-radius: var(--radius-xl);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.35);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      position: relative;
     }
-    footer {
-      background: #142b4a;
-      color: white;
+
+    .hero-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, var(--accent-gold), #ebaf3f, var(--emerald));
+      border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    }
+
+    .hero-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 6px;
+    }
+
+    .hero-card p {
+      font-size: 0.88rem;
+      color: var(--slate-600);
+      margin-bottom: 20px;
+    }
+
+    .quick-form .form-group {
+      margin-bottom: 14px;
+    }
+
+    .quick-form label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--slate-700);
+      margin-bottom: 5px;
+    }
+
+    .quick-form input,
+    .quick-form select,
+    .quick-form textarea {
+      width: 100%;
+      padding: 11px 14px;
+      font-size: 0.92rem;
+      border: 1.5px solid var(--slate-200);
+      border-radius: var(--radius-sm);
+      font-family: inherit;
+      transition: var(--transition);
+      background: var(--white);
+    }
+
+    .quick-form input:focus,
+    .quick-form select:focus,
+    .quick-form textarea:focus {
+      outline: none;
+      border-color: var(--accent-gold);
+      box-shadow: 0 0 0 3px rgba(201, 147, 42, 0.15);
+    }
+
+    .quick-form .btn {
+      width: 100%;
+      margin-top: 6px;
+      padding: 13px;
+    }
+
+    /* ==========================================================================
+       STATS & HIGHLIGHTS RIBBON
+       ========================================================================== */
+    .stats-ribbon {
+      background: var(--white);
+      box-shadow: var(--shadow-lg);
+      border-radius: var(--radius-lg);
+      margin-top: -45px;
+      position: relative;
+      z-index: 20;
+      padding: 30px;
+      border: 1px solid var(--slate-200);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
       text-align: center;
-      padding: 22px;
     }
-    @media (max-width: 500px) {
-      .hero h2 { font-size: 28px; }
-      header h1 { font-size: 26px; }
+
+    .stat-item {
+      padding: 10px 16px;
+      border-right: 1px solid var(--slate-200);
+    }
+
+    .stat-item:last-child {
+      border-right: none;
+    }
+
+    .stat-number {
+      font-size: 2.2rem;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      color: var(--primary);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-label {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--slate-600);
+    }
+
+    /* ==========================================================================
+       OVERVIEW & ABOUT SECTION
+       ========================================================================== */
+    .about-section {
+      padding: 100px 0 70px 0;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-image-wrapper {
+      position: relative;
+    }
+
+    .about-main-img {
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-xl);
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .about-floating-card {
+      position: absolute;
+      bottom: -25px;
+      right: -20px;
+      background: var(--white);
+      padding: 22px 26px;
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--slate-100);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      max-width: 280px;
+    }
+
+    .about-floating-card i {
+      font-size: 2.2rem;
+      color: var(--accent-gold);
+    }
+
+    .about-floating-card h4 {
+      font-size: 1.15rem;
+      margin-bottom: 2px;
+    }
+
+    .about-floating-card p {
+      font-size: 0.82rem;
+      color: var(--slate-600);
+      margin: 0;
+    }
+
+    .about-content h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      margin-bottom: 20px;
+    }
+
+    .about-content p {
+      color: var(--slate-600);
+      font-size: 1.02rem;
+      margin-bottom: 18px;
+    }
+
+    .about-features-list {
+      list-style: none;
+      margin: 26px 0 32px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+
+    .about-features-list li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--slate-800);
+    }
+
+    .about-features-list li i {
+      color: var(--emerald);
+      font-size: 1.1rem;
+    }
+
+    /* ==========================================================================
+       FLATS / UNITS (RENT & SALE)
+       ========================================================================== */
+    .flats-section {
+      padding: 80px 0;
+      background: var(--slate-100);
+    }
+
+    .flats-filter {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 45px;
+    }
+
+    .filter-btn {
+      padding: 10px 24px;
+      background: var(--white);
+      border: 1.5px solid var(--slate-200);
+      border-radius: var(--radius-full);
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--slate-700);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: var(--primary);
+      color: var(--white);
+      border-color: var(--primary);
+      box-shadow: var(--shadow-md);
+    }
+
+    .flats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 30px;
+    }
+
+    .flat-card {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      transition: var(--transition);
+      border: 1px solid var(--slate-200);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .flat-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+      border-color: rgba(201, 147, 42, 0.4);
+    }
+
+    .flat-card-img-wrapper {
+      position: relative;
+      height: 230px;
+      overflow: hidden;
+    }
+
+    .flat-card-img-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .flat-card:hover .flat-card-img-wrapper img {
+      transform: scale(1.06);
+    }
+
+    .flat-tag {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      padding: 5px 12px;
+      border-radius: var(--radius-full);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .flat-tag.rent {
+      background: var(--emerald);
+      color: var(--white);
+    }
+
+    .flat-tag.sale {
+      background: var(--accent-gold);
+      color: var(--white);
+    }
+
+    .flat-tag-sub {
+      position: absolute;
+      bottom: 16px;
+      right: 16px;
+      background: rgba(11, 26, 48, 0.85);
+      color: var(--white);
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .flat-card-body {
+      padding: 24px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .flat-price-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .flat-price {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--primary);
+      font-family: 'Outfit', sans-serif;
+    }
+
+    .flat-price span {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--slate-600);
+    }
+
+    .flat-card-title {
+      font-size: 1.25rem;
+      margin-bottom: 8px;
+    }
+
+    .flat-card-desc {
+      font-size: 0.9rem;
+      color: var(--slate-600);
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    .flat-specs {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      padding: 12px 0;
+      border-top: 1px solid var(--slate-100);
+      border-bottom: 1px solid var(--slate-100);
+      margin-bottom: 20px;
+    }
+
+    .spec-item {
+      text-align: center;
+    }
+
+    .spec-item i {
+      color: var(--accent-gold);
+      font-size: 1rem;
+      margin-bottom: 4px;
+      display: block;
+    }
+
+    .spec-item span {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--slate-700);
+      display: block;
+    }
+
+    .flat-card-actions {
+      margin-top: auto;
+      display: flex;
+      gap: 10px;
+    }
+
+    .flat-card-actions .btn {
+      flex: 1;
+      padding: 10px;
+      font-size: 0.88rem;
+    }
+
+    /* ==========================================================================
+       AMENITIES SECTION
+       ========================================================================== */
+    .amenities-section {
+      padding: 90px 0;
+      background: var(--white);
+    }
+
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .amenity-card {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 28px 22px;
+      text-align: left;
+      transition: var(--transition);
+      position: relative;
+    }
+
+    .amenity-card:hover {
+      background: var(--white);
+      border-color: var(--accent-gold);
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .amenity-icon-box {
+      width: 54px;
+      height: 54px;
+      background: rgba(201, 147, 42, 0.12);
+      color: var(--accent-gold);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.45rem;
+      margin-bottom: 18px;
+      transition: var(--transition);
+    }
+
+    .amenity-card:hover .amenity-icon-box {
+      background: var(--primary);
+      color: var(--white);
+    }
+
+    .amenity-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+    }
+
+    .amenity-card p {
+      font-size: 0.88rem;
+      color: var(--slate-600);
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       PHOTO GALLERY SECTION
+       ========================================================================== */
+    .gallery-section {
+      padding: 90px 0;
+      background: var(--slate-100);
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      height: 270px;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      cursor: pointer;
+      box-shadow: var(--shadow-md);
+    }
+
+    .gallery-item.span-2 {
+      grid-column: span 2;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(11, 26, 48, 0.85) 100%);
+      opacity: 0;
+      display: flex;
+      align-items: flex-end;
+      padding: 20px;
+      transition: var(--transition);
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      opacity: 1;
+    }
+
+    .gallery-caption {
+      color: var(--white);
+    }
+
+    .gallery-caption h4 {
+      color: var(--white);
+      font-size: 1.05rem;
+      margin-bottom: 2px;
+    }
+
+    .gallery-caption span {
+      font-size: 0.82rem;
+      color: var(--accent-gold);
+    }
+
+    /* ==========================================================================
+       EMI CALCULATOR & TOOLS
+       ========================================================================== */
+    .calculator-section {
+      padding: 90px 0;
+      background: var(--white);
+    }
+
+    .calc-box {
+      background: linear-gradient(135deg, #0b1a30 0%, #152d50 100%);
+      color: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 45px;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .calc-inputs h3 {
+      color: var(--white);
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .calc-inputs p {
+      color: #cbd5e1;
+      font-size: 0.95rem;
+      margin-bottom: 30px;
+    }
+
+    .calc-slider-group {
+      margin-bottom: 24px;
+    }
+
+    .calc-label-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .calc-label-row .calc-value {
+      color: var(--accent-gold);
+      font-size: 1.05rem;
+      font-weight: 700;
+    }
+
+    .calc-slider {
+      width: 100%;
+      height: 8px;
+      border-radius: 5px;
+      background: rgba(255, 255, 255, 0.2);
+      outline: none;
+      -webkit-appearance: none;
+      cursor: pointer;
+    }
+
+    .calc-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--accent-gold);
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      border: 2px solid var(--white);
+    }
+
+    .calc-results-card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-lg);
+      padding: 34px 28px;
+      text-align: center;
+    }
+
+    .emi-amount-label {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #94a3b8;
+      margin-bottom: 8px;
+    }
+
+    .emi-amount-value {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: var(--accent-gold);
+      font-family: 'Outfit', sans-serif;
+      margin-bottom: 24px;
+    }
+
+    .emi-breakdown {
+      text-align: left;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding-top: 20px;
+      margin-bottom: 24px;
+    }
+
+    .breakdown-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      color: #cbd5e1;
+    }
+
+    .breakdown-row strong {
+      color: var(--white);
+    }
+
+    /* ==========================================================================
+       LOCATION & ADVANTAGES (ANAPARTHI)
+       ========================================================================== */
+    .location-section {
+      padding: 90px 0;
+      background: var(--slate-100);
+    }
+
+    .location-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .location-info h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      margin-bottom: 16px;
+    }
+
+    .location-info p {
+      font-size: 1.02rem;
+      color: var(--slate-600);
+      margin-bottom: 28px;
+    }
+
+    .distance-matrix {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+
+    .dist-card {
+      background: var(--white);
+      padding: 16px 18px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--slate-200);
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .dist-icon {
+      width: 42px;
+      height: 42px;
+      background: rgba(11, 26, 48, 0.08);
+      color: var(--primary);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    .dist-text h4 {
+      font-size: 0.95rem;
+      margin-bottom: 2px;
+    }
+
+    .dist-text span {
+      font-size: 0.82rem;
+      color: var(--emerald-dark);
+      font-weight: 600;
+    }
+
+    .map-frame-wrapper {
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      height: 440px;
+      border: 2px solid var(--slate-200);
+      background: var(--white);
+    }
+
+    .map-frame-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* ==========================================================================
+       FAQ SECTION
+       ========================================================================== */
+    .faq-section {
+      padding: 90px 0;
+      background: var(--white);
+    }
+
+    .faq-wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      margin-bottom: 16px;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .faq-header {
+      padding: 20px 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--slate-800);
+    }
+
+    .faq-header i {
+      font-size: 1rem;
+      color: var(--accent-gold);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active .faq-header i {
+      transform: rotate(180deg);
+    }
+
+    .faq-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+      padding: 0 24px;
+      color: var(--slate-600);
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+
+    .faq-item.active .faq-body {
+      max-height: 220px;
+      padding: 0 24px 22px 24px;
+    }
+
+    /* ==========================================================================
+       CONTACT & BOOKING SECTION
+       ========================================================================== */
+    .contact-section {
+      padding: 90px 0;
+      background: linear-gradient(180deg, var(--slate-100) 0%, #e2e8f0 100%);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 50px;
+    }
+
+    .contact-info-card {
+      background: var(--primary);
+      color: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 45px 36px;
+      box-shadow: var(--shadow-xl);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact-info-card h3 {
+      color: var(--white);
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .contact-info-card p {
+      color: #cbd5e1;
+      margin-bottom: 34px;
+      font-size: 0.95rem;
+    }
+
+    .contact-channels {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 34px;
+    }
+
+    .channel-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .channel-icon {
+      width: 46px;
+      height: 46px;
+      background: rgba(201, 147, 42, 0.18);
+      color: var(--accent-gold);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .channel-details h4 {
+      color: var(--white);
+      font-size: 1rem;
+      margin-bottom: 3px;
+    }
+
+    .channel-details a,
+    .channel-details span {
+      color: #cbd5e1;
+      font-size: 0.92rem;
+    }
+
+    .channel-details a:hover {
+      color: var(--accent-gold);
+    }
+
+    .contact-form-card {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: 45px 40px;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--slate-200);
+    }
+
+    .contact-form-card h3 {
+      font-size: 1.7rem;
+      margin-bottom: 8px;
+    }
+
+    .contact-form-card p {
+      color: var(--slate-600);
+      margin-bottom: 26px;
+      font-size: 0.95rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* ==========================================================================
+       MODAL (FLOOR PLAN / ENQUIRY)
+       ========================================================================== */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(11, 26, 48, 0.85);
+      backdrop-filter: blur(8px);
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-overlay.active {
+      display: flex;
+    }
+
+    .modal-content {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      max-width: 650px;
+      width: 100%;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 34px;
+      position: relative;
+      box-shadow: var(--shadow-xl);
+      animation: modalFadeIn 0.3s ease;
+    }
+
+    @keyframes modalFadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--slate-100);
+      border: none;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--slate-600);
+      transition: var(--transition);
+    }
+
+    .modal-close-btn:hover {
+      background: var(--slate-200);
+      color: var(--slate-900);
+    }
+
+    /* ==========================================================================
+       FLOATING ACTIONS & STICKY BOTTOM BAR
+       ========================================================================== */
+    .floating-whatsapp {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 62px;
+      height: 62px;
+      background: #25d366;
+      color: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      z-index: 1500;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+
+    .floating-whatsapp:hover {
+      transform: scale(1.1) rotate(5deg);
+      box-shadow: 0 12px 30px rgba(37, 211, 102, 0.6);
+      color: var(--white);
+    }
+
+    .floating-whatsapp .tooltip {
+      position: absolute;
+      right: 74px;
+      background: var(--slate-900);
+      color: var(--white);
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      font-weight: 600;
+      white-space: nowrap;
+      pointer-events: none;
+      opacity: 0;
+      transition: var(--transition);
+      box-shadow: var(--shadow-md);
+    }
+
+    .floating-whatsapp:hover .tooltip {
+      opacity: 1;
+    }
+
+    .mobile-action-bar {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--white);
+      border-top: 1px solid var(--slate-200);
+      padding: 10px 16px;
+      z-index: 1400;
+      box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .mobile-action-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    /* ==========================================================================
+       FOOTER
+       ========================================================================== */
+    footer {
+      background: var(--primary-dark);
+      color: #94a3b8;
+      padding: 70px 0 25px 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .footer-col h4 {
+      color: var(--white);
+      font-size: 1.15rem;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 8px;
+    }
+
+    .footer-col h4::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 32px;
+      height: 2px;
+      background: var(--accent-gold);
+    }
+
+    .footer-col p {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: #94a3b8;
+      font-size: 0.92rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .footer-links a:hover {
+      color: var(--accent-gold);
+      transform: translateX(4px);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE DESIGN (MEDIA QUERIES)
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .hero-grid,
+      .about-grid,
+      .calc-grid,
+      .location-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stat-item:nth-child(2) {
+        border-right: none;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 820px) {
+      .top-bar {
+        display: none;
+      }
+
+      .nav-menu {
+        position: fixed;
+        top: 76px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 76px);
+        background: var(--primary);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 30px;
+        transition: 0.35s ease;
+        overflow-y: auto;
+      }
+
+      .nav-menu.open {
+        left: 0;
+      }
+
+      .nav-menu a {
+        font-size: 1.15rem;
+        display: block;
+        width: 100%;
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .nav-actions .btn-gold {
+        display: none;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item.span-2 {
+        grid-column: span 1;
+      }
+
+      .distance-matrix {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .mobile-action-bar {
+        display: block;
+      }
+
+      body {
+        padding-bottom: 60px;
+      }
+
+      .floating-whatsapp {
+        bottom: 80px;
+        right: 18px;
+        width: 52px;
+        height: 52px;
+        font-size: 1.7rem;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .stats-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stat-item {
+        border-right: none;
+        border-bottom: 1px solid var(--slate-200);
+      }
+
+      .stat-item:last-child {
+        border-bottom: none;
+      }
+
+      .about-floating-card {
+        position: static;
+        margin-top: 16px;
+        max-width: 100%;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Ganesh Towers</h1>
-    <p>Your place to call home</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#flats">Flats</a>
-      <a href="#facilities">Facilities</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
 
-  <div class="hero">
-    <h2>Find Your New Home</h2>
-    <p>Explore apartment options for rent or sale.</p>
-    <p><strong>Anaparthi, Andhra Pradesh</strong></p>
-    <a class="btn" href="#flats">Explore Flats</a>
-    <a class="btn" href="#contact">Contact Us</a>
+  <!-- ==========================================================================
+       TOP INFO BAR
+       ========================================================================== -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-info">
+        <span><i class="fa-solid fa-location-dot"></i> Anaparthi, Andhra Pradesh - 533342</span>
+        <span><i class="fa-solid fa-clock"></i> Site Visits: 9:00 AM – 7:00 PM</span>
+        <span><i class="fa-solid fa-shield-halved"></i> 100% Clear Title & Vastu Approved</span>
+      </div>
+      <div class="top-bar-info">
+        <a href="tel:+919876543210" style="color: inherit;" class="phone-link"><i class="fa-solid fa-phone"></i> Direct Enquiry: +91 9XXXXXXXXX</a>
+      </div>
+    </div>
   </div>
 
-  <main>
-    <section id="about">
-      <h2>About Our Apartment</h2>
-      <p>
-        Welcome to Ganesh Towers. Discover apartment options
-        and get in touch with us for availability, pricing and
-        property details.
-      </p>
-    </section>
-
-    <section id="flats">
-      <h2>Available Flats</h2>
-      <div class="cards">
-        <div class="card">
-          <h3>Flats for Rent</h3>
-          <p>Ask us about available flats, monthly rent and deposit.</p>
-          <a class="btn" href="#contact">Enquire Now</a>
+  <!-- ==========================================================================
+       NAVIGATION HEADER
+       ========================================================================== -->
+  <header class="header-nav" id="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand-logo">
+        <div class="brand-icon">
+          <i class="fa-solid fa-building"></i>
         </div>
-        <div class="card">
-          <h3>Flats for Sale</h3>
-          <p>Ask us about available properties and sale prices.</p>
-          <a class="btn" href="#contact">Enquire Now</a>
+        <div class="brand-text">
+          <h1>Ganesh Towers</h1>
+          <span>Luxury Residential Living</span>
         </div>
-      </div>
-      <p>Contact us for current availability and pricing.</p>
-    </section>
-
-    <section id="facilities">
-      <h2>Facilities</h2>
-      <div class="cards">
-        <div class="card">🏠 Comfortable living spaces</div>
-        <div class="card">📍 Convenient location</div>
-        <div class="card">🤝 Direct enquiries</div>
-      </div>
-      <p>Ask us about parking, water supply and other amenities.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Interested in renting or buying a flat? Contact us for details.</p>
-
-      <!-- Replace 91XXXXXXXXXX with your WhatsApp number -->
-      <a class="btn"
-         href="https://wa.me/91XXXXXXXXXX?text=Hello%2C%20I%20am%20interested%20in%20Ganesh%20Towers."
-         target="_blank" rel="noopener">
-        Enquire on WhatsApp
       </a>
 
-      <p>Location: Anaparthi, Andhra Pradesh</p>
-    </section>
-  </main>
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#flats">Available Flats</a></li>
+          <li><a href="#amenities">Amenities</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#calculator">EMI Tool</a></li>
+          <li><a href="#location">Location</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
 
+      <div class="nav-actions">
+        <a href="#contact" class="btn btn-gold btn-sm"><i class="fa-solid fa-calendar-check"></i> Book Visit</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-certificate"></i> Premium Residential Apartments • Anaparthi
+          </div>
+          <h2 class="hero-title">
+            Your Dream Home Awaits at <span>Ganesh Towers</span>
+          </h2>
+          <p class="hero-desc">
+            Experience modern architecture, unmatched ventilation, and peaceful living in Anaparthi. 
+            Thoughtfully planned 2 &amp; 3 BHK apartments crafted for luxury, comfort, and positive living.
+          </p>
+
+          <div class="hero-tags">
+            <div class="hero-tag-item"><i class="fa-solid fa-compass"></i> 100% Vastu Compliant</div>
+            <div class="hero-tag-item"><i class="fa-solid fa-key"></i> Ready for Immediate Move-in</div>
+            <div class="hero-tag-item"><i class="fa-solid fa-bolt"></i> 24/7 Generator Backup</div>
+            <div class="hero-tag-item"><i class="fa-solid fa-square-parking"></i> Covered Parking</div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#flats" class="btn btn-gold">
+              <i class="fa-solid fa-door-open"></i> Explore Available Flats
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fa-solid fa-calendar-days"></i> Schedule Site Visit
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Quick Enquiry Card -->
+        <div class="hero-card">
+          <h3>Quick Enquiry</h3>
+          <p>Direct owner response for rent &amp; sale details.</p>
+          <form class="quick-form" id="quickEnquiryForm">
+            <div class="form-group">
+              <label for="quickName">Full Name</label>
+              <input type="text" id="quickName" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+              <label for="quickPhone">Mobile Number / WhatsApp</label>
+              <input type="tel" id="quickPhone" placeholder="Enter 10-digit mobile number" required>
+            </div>
+            <div class="form-group">
+              <label for="quickType">Interested In</label>
+              <select id="quickType">
+                <option value="Flat for Rent (2 BHK)">Flat for Rent (2 BHK)</option>
+                <option value="Flat for Rent (3 BHK)">Flat for Rent (3 BHK)</option>
+                <option value="Flat for Sale (2 BHK)">Flat for Sale (2 BHK)</option>
+                <option value="Flat for Sale (3 BHK)">Flat for Sale (3 BHK)</option>
+                <option value="Site Visit Booking">Schedule Physical Site Visit</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp Instantly
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       STATS RIBBON
+       ========================================================================== -->
+  <div class="container">
+    <div class="stats-ribbon">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">100%</div>
+          <div class="stat-label">Vastu Compliant Layouts</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">2 &amp; 3 BHK</div>
+          <div class="stat-label">Spacious Configurations</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">24/7</div>
+          <div class="stat-label">DG Power &amp; Water Supply</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">Prime</div>
+          <div class="stat-label">Heart of Anaparthi Town</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       ABOUT SECTION
+       ========================================================================== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-wrapper">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" 
+               alt="Luxury Living at Ganesh Towers" class="about-main-img">
+          <div class="about-floating-card">
+            <i class="fa-solid fa-award"></i>
+            <div>
+              <h4>Quality Construction</h4>
+              <p>Built with premium materials &amp; earthquake-resistant RCC design.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content">
+          <div class="badge-tag"><i class="fa-solid fa-landmark"></i> About Ganesh Towers</div>
+          <h2>A Serene Residential Haven in Anaparthi</h2>
+          <p>
+            Welcome to <strong>Ganesh Towers</strong>, an address of distinction in Anaparthi, East Godavari. 
+            Designed for families who appreciate privacy, modern convenience, and exceptional quality of life.
+          </p>
+          <p>
+            Each home is planned with expansive balconies, well-ventilated living spaces, and natural sunlight, 
+            adhering strictly to authentic Vastu principles to bring peace and prosperity to your household.
+          </p>
+
+          <ul class="about-features-list">
+            <li><i class="fa-solid fa-circle-check"></i> High-speed passenger elevator</li>
+            <li><i class="fa-solid fa-circle-check"></i> Covered stilt vehicle parking</li>
+            <li><i class="fa-solid fa-circle-check"></i> Uninterrupted 24-hr water supply</li>
+            <li><i class="fa-solid fa-circle-check"></i> Multi-tier CCTV security cameras</li>
+            <li><i class="fa-solid fa-circle-check"></i> Open breezy terrace with sit-outs</li>
+            <li><i class="fa-solid fa-circle-check"></i> Rapid access to Anaparthi station</li>
+          </ul>
+
+          <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+            <a href="#flats" class="btn btn-dark">View Unit Plans</a>
+            <a href="#contact" class="btn btn-gold">Contact Management</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FLATS / UNITS SECTION (RENT & SALE)
+       ========================================================================== -->
+  <section class="flats-section" id="flats">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag"><i class="fa-solid fa-house"></i> Available Properties</div>
+        <h2 class="section-title">Flats for Rent &amp; Sale</h2>
+        <p class="section-subtitle">
+          Choose from meticulously designed 2 BHK and 3 BHK residences catering to both tenants and prospective property owners.
+        </p>
+      </div>
+
+      <!-- Filter Controls -->
+      <div class="flats-filter">
+        <button class="filter-btn active" data-filter="all">All Properties</button>
+        <button class="filter-btn" data-filter="rent">Flats For Rent</button>
+        <button class="filter-btn" data-filter="sale">Flats For Sale</button>
+      </div>
+
+      <!-- Flats Grid -->
+      <div class="flats-grid">
+        
+        <!-- CARD 1: 2 BHK For Rent -->
+        <div class="flat-card" data-category="rent">
+          <div class="flat-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80" alt="2 BHK Apartment for Rent">
+            <span class="flat-tag rent">For Rent</span>
+            <span class="flat-tag-sub"><i class="fa-solid fa-bolt"></i> Ready to Move</span>
+          </div>
+          <div class="flat-card-body">
+            <div class="flat-price-header">
+              <div class="flat-price">₹10,000 - 14,000 <span>/ month</span></div>
+            </div>
+            <h3 class="flat-card-title">Executive 2 BHK Apartment</h3>
+            <p class="flat-card-desc">
+              Comfortable layout featuring a wide living area, modular kitchen, master bedroom with attached bath, and utility balcony.
+            </p>
+            <div class="flat-specs">
+              <div class="spec-item">
+                <i class="fa-solid fa-vector-square"></i>
+                <span>1,150 Sq.Ft</span>
+              </div>
+              <div class="spec-item">
+                <i class="fa-solid fa-bed"></i>
+                <span>2 Bedrooms</span>
+              </div>
+              <div class="spec-item">
+                <i class="fa-solid fa-bath"></i>
+                <span>2 Bathrooms</span>
+              </div>
+            </div>
+            <div class="flat-card-actions">
+              <button class="btn btn-outline-dark btn-sm" onclick="openSpecModal('Executive 2 BHK (Rent)', '1,150 Sq.Ft', 'East Facing', '2 Bed, 2 Bath, 1 Balcony, 1 Kitchen', 'Starting ₹10,000 - ₹14,000/mo', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=700&q=80')">
+                <i class="fa-solid fa-info-circle"></i> Details
+              </button>
+              <button class="btn btn-whatsapp btn-sm" onclick="sendWhatsAppEnquiry('Executive 2 BHK for Rent')">
+                <i class="fa-brands fa-whatsapp"></i> Rent Query
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 2: 3 BHK For Rent -->
+        <div class="flat-card" data-category="rent">
+          <div class="flat-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=700&q=80" alt="3 BHK Apartment for Rent">
+            <span class="flat-tag rent">For Rent</span>
+            <span class="flat-tag-sub"><i class="fa-solid fa-compass"></i> North Facing</span>
+          </div>
+          <div class="flat-card-body">
+            <div class="flat-price-header">
+              <div class="flat-price">₹15,000 - 19,000 <span>/ month</span></div>
+            </div>
+            <h3 class="flat-card-title">Deluxe 3 BHK Family Residence</h3>
+            <p class="flat-card-desc">
+              Generous floor space with double balconies, grand dining hall, premium tile finishes, and excellent cross-ventilation.
+            </p>
+            <div class="flat-specs">
+              <div class="spec-item">
+                <i class="fa-solid fa-vector-square"></i>
+                <span>1,550 Sq.Ft</span>
+              </div>
+              <div class="spec-item">
+                <i class="fa-solid fa-bed"></i>
+                <span>3 Bedrooms</span>
+              </div>
+              <div class="spec-item">
+                <i class="fa-solid fa-bath"></i>
+                <span>3 Bathrooms</span>
+              </div>
+            </div>
+            <div class="flat-card-actions">
+              <button class="btn btn-outline-dark btn-sm" onclick="openSpecModal('Deluxe 3 BHK (Rent)', '1,550 Sq.Ft', 'North Facing', '3 Bed, 3 Bath, 2 Balconies, Dining Hall', 'Starting ₹15,000 - ₹19,000/mo', 'https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=700&q=80')">
+                <i class="fa-solid fa-info-circle"></i> Details
+              </button>
+              <button class="btn btn-whatsapp btn-sm" onclick="sendWhatsAppEnquiry('Deluxe 3 BHK for Rent')">
+                <i class="fa-brands fa-whatsapp"></i> Rent Query
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: 2 BHK For Sale -->
+        <div class="flat-card" data-category="sale">
+          <div class="flat-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80" alt="2 BHK Apartment for Sale">
+            <span class="flat-tag sale">For Sale</span>
+            <span class="flat-tag-sub"><i class="fa-solid fa-shield"></i> Clear Title</span>
+          </div>
+          <div class="flat-card-body">
+            <div class="flat-price-header">
+              <div class="flat-price">₹38 Lakhs* <span>(Negotiable)</span></div>
+            </div>
+            <h3 class="flat-card-title">Classic 2 BHK Flat (Ownership)</h3>
+            <p class="flat-card-desc">
+              Own your freehold home in Anaparthi. Approved plan, bank loan assistance ready, covered car parking slot included.
+            </p>
+            <div class="flat-specs">
+              <div class="spec-item">
+                <i class="fa-solid fa-vector-square"></i>
+                <span>1,200 Sq.Ft</span>
+              </div>
+              <div class="spec-item">
+                <i class="fa-solid fa-bed"></i>
+                <span>2 Bedrooms</span>
+              </div>
+              <div class="spec-item">
+                <i class="fa-solid fa-bath"></i>
+                <span>2 Bathrooms</span>
+              </div>
+            </div>
+            <div class="flat-card-actions">
+              <button class="btn btn-outline-dark btn-sm" onclick="openSpecModal('Classic 2 BHK (Sale)', '1,200 Sq.Ft', 'East Facing', '2 Bed, 2 Bath, Utility, Covered Parking', 'Starting ₹38 Lakhs*', 'https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=700&q=80')">
+                <i class="fa-solid fa-info-circle"></i> Details
+              </button>
+              <button class="btn btn-whatsapp btn-sm" onclick="sendWhatsAppEnquiry('Classic 2 BHK for Sale')">
+                <i class="fa-brands fa-whatsapp"></i> Buy Query
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: 3 BHK For Sale -->
+        <div class="flat-card" data-category="sale">
+          <div class="flat-card-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=700&q=80" alt="3 BHK Apartment for Sale">
+            <span class="flat-tag sale">For Sale</span>
+            <span class="flat-tag-sub"><i class="fa-solid fa-crown"></i> Premium Suite</span>
+          </div>
+          <div class="flat-card-body">
+            <div class="flat-price-header">
+              <div class="flat-price">₹52 Lakhs* <span>(Negotiable)</span></div>
+            </div>
+            <h3 class="flat-card-title">Royal 3 BHK Corner Suite</h3>
+            <p class="flat-card-desc">
+              Exclusive corner flat boasting 3-sided open ventilation, double private balconies, teakwood framing, and scenic town views.
+            </p>
+            <div class="flat-specs">
+              <div class="spec-item">
+                <i class="fa-solid fa-vector-square"></i>
+                <span>1,680 Sq.Ft</span>
+              </div>
+              <div class="spec-item">
+                <i class="fa-solid fa-bed"></i>
+                <span>3 Bedrooms</span>
+              </div>
+              <div class="spec-item">
+                <i class="fa-solid fa-bath"></i>
+                <span>3 Bathrooms</span>
+              </div>
+            </div>
+            <div class="flat-card-actions">
+              <button class="btn btn-outline-dark btn-sm" onclick="openSpecModal('Royal 3 BHK Corner Suite (Sale)', '1,680 Sq.Ft', 'North-East Corner', '3 Bed, 3 Bath, 2 Balconies, Reserved Stilt Parking', 'Starting ₹52 Lakhs*', 'https://images.unsplash.com/photo-1574362848149-11496d93a7c7?auto=format&fit=crop&w=700&q=80')">
+                <i class="fa-solid fa-info-circle"></i> Details
+              </button>
+              <button class="btn btn-whatsapp btn-sm" onclick="sendWhatsAppEnquiry('Royal 3 BHK for Sale')">
+                <i class="fa-brands fa-whatsapp"></i> Buy Query
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       AMENITIES & FACILITIES
+       ========================================================================== */
+  <section class="amenities-section" id="amenities">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag"><i class="fa-solid fa-star"></i> Lifestyle Facilities</div>
+        <h2 class="section-title">Designed for Modern Comfort</h2>
+        <p class="section-subtitle">
+          Ganesh Towers is equipped with modern infrastructure and reliable utilities to guarantee a peaceful, safe, and convenient lifestyle.
+        </p>
+      </div>
+
+      <div class="amenities-grid">
+        
+        <div class="amenity-card">
+          <div class="amenity-icon-box"><i class="fa-solid fa-bolt"></i></div>
+          <h3>24/7 DG Power Backup</h3>
+          <p>Continuous power generator backup supporting elevators, common areas, water pumps, and essential flat points.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon-box"><i class="fa-solid fa-elevator"></i></div>
+          <h3>Automatic High-Speed Elevator</h3>
+          <p>Smooth, spacious passenger elevator with Automatic Rescue Device (ARD) and emergency battery backup.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3>CCTV &amp; Manned Security</h3>
+          <p>Multi-camera surveillance across entry gates, corridors, and parking lot with on-site security personnel.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon-box"><i class="fa-solid fa-square-parking"></i></div>
+          <h3>Covered Stilt Parking</h3>
+          <p>Designated, easy-maneuver covered parking for four-wheelers and two-wheelers on the stilt floor.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon-box"><i class="fa-solid fa-faucet-drip"></i></div>
+          <h3>Abundant 24-Hr Water Supply</h3>
+          <p>Round-the-clock water facility with overhead storage tanks, deep borewell, and municipal water connections.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon-box"><i class="fa-solid fa-compass"></i></div>
+          <h3>100% Vastu Compliance</h3>
+          <p>Carefully planned alignments ensuring auspicious energy, abundant sunlight, and unobstructed natural breeze.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon-box"><i class="fa-solid fa-cloud-sun"></i></div>
+          <h3>Rooftop Terrace Walkway</h3>
+          <p>Open, peaceful rooftop sit-out area ideal for morning yoga, evening walks, and panoramic neighborhood views.</p>
+        </div>
+
+        <div class="amenity-card">
+          <div class="amenity-icon-box"><i class="fa-solid fa-wifi"></i></div>
+          <h3>FTTH High-Speed Fiber Ready</h3>
+          <p>Pre-laid fiber-optic conduit lines for instant high-speed broadband internet and DTH television access.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PHOTO & LIFESTYLE GALLERY
+       ========================================================================== -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag"><i class="fa-solid fa-camera"></i> Visual Showcase</div>
+        <h2 class="section-title">Take a Glimpse of the Tower</h2>
+        <p class="section-subtitle">
+          Explore the contemporary design, clean common areas, and modern apartment interiors.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item span-2" onclick="openLightbox('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80', 'Architectural Elevation & Front Facade')">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1000&q=80" alt="Apartment Exterior">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h4>Modern Front Elevation</h4>
+              <span>Ganesh Towers Main View</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80', 'Spacious Living & Dining Hall')">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Living Room">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h4>Living &amp; Dining Hall</h4>
+              <span>Well-lit Interiors</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=80', 'Modular Kitchen Layout')">
+          <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=600&q=80" alt="Kitchen Layout">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h4>Modular Kitchen Space</h4>
+              <span>Utility balcony attached</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=1200&q=80', 'Master Bedroom Suite')">
+          <img src="https://images.unsplash.com/photo-1616594039964-ae9021a400a0?auto=format&fit=crop&w=600&q=80" alt="Master Bedroom">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h4>Master Bedroom</h4>
+              <span>Spacious wardrobe provision</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1200&q=80', 'Private Balcony View')">
+          <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=80" alt="Balcony View">
+          <div class="gallery-overlay">
+            <div class="gallery-caption">
+              <h4>Open Airy Balcony</h4>
+              <span>Scenic town view</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       EMI CALCULATOR SECTION
+       ========================================================================== -->
+  <section class="calculator-section" id="calculator">
+    <div class="container">
+      <div class="calc-box">
+        <div class="calc-grid">
+          
+          <div class="calc-inputs">
+            <div class="badge-tag" style="background: rgba(255,255,255,0.1); color: var(--accent-gold); border-color: rgba(255,255,255,0.2);">
+              <i class="fa-solid fa-calculator"></i> Financial Planner
+            </div>
+            <h3>Home Loan EMI Calculator</h3>
+            <p>Calculate your estimated monthly installment for purchasing a flat at Ganesh Towers.</p>
+
+            <div class="calc-slider-group">
+              <div class="calc-label-row">
+                <span>Property / Loan Amount:</span>
+                <span class="calc-value" id="loanAmountText">₹35,00,000</span>
+              </div>
+              <input type="range" class="calc-slider" id="loanAmountSlider" min="1000000" max="8000000" step="50000" value="3500000">
+            </div>
+
+            <div class="calc-slider-group">
+              <div class="calc-label-row">
+                <span>Interest Rate (% per annum):</span>
+                <span class="calc-value" id="interestRateText">8.5%</span>
+              </div>
+              <input type="range" class="calc-slider" id="interestRateSlider" min="7.0" max="13.0" step="0.1" value="8.5">
+            </div>
+
+            <div class="calc-slider-group">
+              <div class="calc-label-row">
+                <span>Tenure (Years):</span>
+                <span class="calc-value" id="loanTenureText">20 Years</span>
+              </div>
+              <input type="range" class="calc-slider" id="loanTenureSlider" min="5" max="30" step="1" value="20">
+            </div>
+          </div>
+
+          <div class="calc-results-card">
+            <div class="emi-amount-label">Estimated Monthly EMI</div>
+            <div class="emi-amount-value" id="monthlyEmiResult">₹30,373</div>
+            
+            <div class="emi-breakdown">
+              <div class="breakdown-row">
+                <span>Principal Amount:</span>
+                <strong id="principalResult">₹35,00,000</strong>
+              </div>
+              <div class="breakdown-row">
+                <span>Total Interest Payable:</span>
+                <strong id="totalInterestResult">₹37,89,520</strong>
+              </div>
+              <div class="breakdown-row">
+                <span>Total Payment (P + I):</span>
+                <strong id="totalPaymentResult">₹72,89,520</strong>
+              </div>
+            </div>
+
+            <button class="btn btn-gold" style="width: 100%;" onclick="sendWhatsAppEnquiry('Home Loan & Buying Assistance')">
+              <i class="fa-brands fa-whatsapp"></i> Enquire for Bank Loan
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       LOCATION & STRATEGIC ADVANTAGES (ANAPARTHI)
+       ========================================================================== -->
+  <section class="location-section" id="location">
+    <div class="container">
+      <div class="location-grid">
+        
+        <div class="location-info">
+          <div class="badge-tag"><i class="fa-solid fa-map-pin"></i> Prime Connectivity</div>
+          <h2>Located in the Heart of Anaparthi</h2>
+          <p>
+            Ganesh Towers offers convenient proximity to daily markets, educational institutes, 
+            healthcare facilities, and key transportation hubs in East Godavari.
+          </p>
+
+          <div class="distance-matrix">
+            <div class="dist-card">
+              <div class="dist-icon"><i class="fa-solid fa-train"></i></div>
+              <div class="dist-text">
+                <h4>Anaparthi Railway Station</h4>
+                <span>3 - 4 Minutes Drive</span>
+              </div>
+            </div>
+
+            <div class="dist-card">
+              <div class="dist-icon"><i class="fa-solid fa-road"></i></div>
+              <div class="dist-text">
+                <h4>Main Road / State Highway</h4>
+                <span>2 Minutes (Easy Access)</span>
+              </div>
+            </div>
+
+            <div class="dist-card">
+              <div class="dist-icon"><i class="fa-solid fa-hospital"></i></div>
+              <div class="dist-text">
+                <h4>Hospitals &amp; Clinics</h4>
+                <span>Within 500m - 1.5 km</span>
+              </div>
+            </div>
+
+            <div class="dist-card">
+              <div class="dist-icon"><i class="fa-solid fa-school"></i></div>
+              <div class="dist-text">
+                <h4>Schools &amp; Colleges</h4>
+                <span>Reputed Institutions Nearby</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://maps.google.com/?q=Anaparthi+Andhra+Pradesh" target="_blank" rel="noopener" class="btn btn-dark">
+            <i class="fa-solid fa-location-arrow"></i> Open in Google Maps
+          </a>
+        </div>
+
+        <div class="map-frame-wrapper">
+          <!-- Responsive Google Map centered on Anaparthi -->
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30536.81235123956!2d81.93976865!3d16.9996788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a37996f0ba13c97%3A0xe54fbcf6791bf6eb!2sAnaparthi%2C%20Andhra%20Pradesh!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ganesh Towers Location Map">
+          </iframe>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FAQ SECTION
+       ========================================================================== -->
+  <section class="faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <div class="badge-tag"><i class="fa-solid fa-circle-question"></i> Help &amp; Clarifications</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          Got questions? Here are quick answers regarding rent, ownership, documentation, and amenities.
+        </p>
+      </div>
+
+      <div class="faq-wrapper">
+        
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>Are the flats available for immediate possession / move-in?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-body">
+            Yes! We have ready-to-move-in flats available for both tenants looking for immediate rental accommodation and buyers seeking immediate home ownership. Contact our management directly to schedule a walkthrough.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>Are all the apartments 100% Vastu compliant?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-body">
+            Yes, every unit at Ganesh Towers has been engineered strictly according to Vedic Vastu guidelines. All main entrances are East or North facing, kitchens are placed in Agni moola (South-East), and master bedrooms are placed in South-West.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>What are the security deposit and rent terms for rental units?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-body">
+            Rental deposits and monthly rental charges depend on the selected configuration (2 BHK or 3 BHK). Standard agreements are created with direct owner communication, transparent maintenance terms, and zero brokerage.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>Can I get a bank loan for purchasing a flat here?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-body">
+            Yes, Ganesh Towers possesses 100% clear titles, approved building plans, and legal clearances. Properties are eligible for home loans through leading nationalized and private banks (SBI, HDFC, ICICI, etc.).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-header">
+            <span>What provisions exist for car parking and elevators?</span>
+            <i class="fa-solid fa-chevron-down"></i>
+          </div>
+          <div class="faq-body">
+            We provide covered ground/stilt parking for four-wheelers and two-wheelers, along with a modern automatic elevator equipped with an automatic rescue system and generator connectivity.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CONTACT & VISIT BOOKING SECTION
+       ========================================================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        
+        <!-- Contact Information -->
+        <div class="contact-info-card">
+          <div class="badge-tag" style="background: rgba(201, 147, 42, 0.2); color: #ffd885; border-color: rgba(201, 147, 42, 0.4);">
+            <i class="fa-solid fa-handshake"></i> Get in Touch
+          </div>
+          <h3>Let's Connect</h3>
+          <p>
+            Interested in renting or buying at Ganesh Towers? Reach out to us directly for visits, pricing, or custom walkthrough appointments.
+          </p>
+
+          <div class="contact-channels">
+            <div class="channel-item">
+              <div class="channel-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+              <div class="channel-details">
+                <h4>Building Address</h4>
+                <span>Ganesh Towers, Anaparthi, East Godavari District, Andhra Pradesh - 533342</span>
+              </div>
+            </div>
+
+            <div class="channel-item">
+              <div class="channel-icon"><i class="fa-solid fa-phone"></i></div>
+              <div class="channel-details">
+                <h4>Phone &amp; WhatsApp</h4>
+                <a href="tel:+919876543210" class="phone-link">+91 9XXXXXXXXX</a><br>
+                <small style="color: #94a3b8;">Available Monday – Sunday, 9 AM – 7 PM</small>
+              </div>
+            </div>
+
+            <div class="channel-item">
+              <div class="channel-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div class="channel-details">
+                <h4>Email Inquiries</h4>
+                <a href="mailto:ganeshtowers.anaparthi@gmail.com" class="email-link">ganeshtowers.anaparthi@gmail.com</a>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top: 20px;">
+            <a href="https://wa.me/91XXXXXXXXXX?text=Hello%20Ganesh%20Towers%2C%20I%20am%20interested%20in%20visiting%20the%20property." 
+               target="_blank" rel="noopener" class="btn btn-whatsapp" id="contactWhatsAppBtn">
+              <i class="fa-brands fa-whatsapp"></i> Chat with Us on WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact / Site Visit Form -->
+        <div class="contact-form-card">
+          <h3>Schedule a Site Visit</h3>
+          <p>Fill out the form below and we'll confirm your visit slot instantly.</p>
+
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="formName">Your Full Name *</label>
+                <input type="text" id="formName" placeholder="e.g. Ramesh Kumar" required>
+              </div>
+              <div class="form-group">
+                <label for="formPhone">Phone Number *</label>
+                <input type="tel" id="formPhone" placeholder="e.g. 9876543210" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="formCategory">Requirement *</label>
+                <select id="formCategory">
+                  <option value="Rent 2 BHK">Looking to Rent (2 BHK)</option>
+                  <option value="Rent 3 BHK">Looking to Rent (3 BHK)</option>
+                  <option value="Buy 2 BHK">Looking to Buy (2 BHK)</option>
+                  <option value="Buy 3 BHK">Looking to Buy (3 BHK)</option>
+                  <option value="General Query">General Enquiry</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="formDate">Preferred Visit Date</label>
+                <input type="date" id="formDate">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="formMessage">Special Notes or Questions</label>
+              <textarea id="formMessage" rows="3" placeholder="Tell us about your requirements, family size, move-in timeline..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold" style="width: 100%;">
+              <i class="fa-solid fa-paper-plane"></i> Submit &amp; WhatsApp Details
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
   <footer>
-    <p>© 2026 Ganesh Towers. All rights reserved.</p>
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-col">
+          <div class="brand-logo" style="margin-bottom: 16px;">
+            <div class="brand-icon"><i class="fa-solid fa-building"></i></div>
+            <div class="brand-text">
+              <h2 style="font-size: 1.45rem; color: #fff; margin:0;">Ganesh Towers</h2>
+              <span style="color: var(--accent-gold); font-size: 0.75rem;">Anaparthi, Andhra Pradesh</span>
+            </div>
+          </div>
+          <p>
+            An exceptional residential development designed for modern, comfortable living. 
+            Offering premium 2 &amp; 3 BHK flats for rent and purchase in Anaparthi.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home"><i class="fa-solid fa-angle-right"></i> Home</a></li>
+            <li><a href="#about"><i class="fa-solid fa-angle-right"></i> About Us</a></li>
+            <li><a href="#flats"><i class="fa-solid fa-angle-right"></i> Flats for Rent</a></li>
+            <li><a href="#flats"><i class="fa-solid fa-angle-right"></i> Flats for Sale</a></li>
+            <li><a href="#amenities"><i class="fa-solid fa-angle-right"></i> Amenities</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Highlights</h4>
+          <ul class="footer-links">
+            <li><a href="#calculator"><i class="fa-solid fa-angle-right"></i> EMI Calculator</a></li>
+            <li><a href="#gallery"><i class="fa-solid fa-angle-right"></i> Photo Gallery</a></li>
+            <li><a href="#location"><i class="fa-solid fa-angle-right"></i> Strategic Location</a></li>
+            <li><a href="#faq"><i class="fa-solid fa-angle-right"></i> Common FAQs</a></li>
+            <li><a href="#contact"><i class="fa-solid fa-angle-right"></i> Schedule Visit</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Property Address</h4>
+          <p><i class="fa-solid fa-map-pin" style="color: var(--accent-gold);"></i> Ganesh Towers, Main Road, Anaparthi - 533342, Andhra Pradesh, India</p>
+          <p><i class="fa-solid fa-phone" style="color: var(--accent-gold);"></i> Direct: <span class="phone-display">+91 9XXXXXXXXX</span></p>
+          <div style="margin-top: 14px;">
+            <a href="#contact" class="btn btn-outline btn-sm"><i class="fa-solid fa-calendar"></i> Book a Walkthrough</a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>© <span id="currentYear">2026</span> Ganesh Towers. All rights reserved.</div>
+        <div style="color: #64748b;">Anaparthi Residential Living • East Godavari, AP</div>
+      </div>
+    </div>
   </footer>
+
+  <!-- ==========================================================================
+       FLOATING WHATSAPP BUTTON
+       ========================================================================== -->
+  <a href="https://wa.me/91XXXXXXXXXX?text=Hello%20Ganesh%20Towers%2C%20I%20am%20interested%20in%20the%20apartments." 
+     class="floating-whatsapp" id="floatingWhatsApp" target="_blank" rel="noopener" aria-label="WhatsApp Enquiries">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <!-- ==========================================================================
+       MOBILE QUICK ACTION BAR (Visible on Phones)
+       ========================================================================== -->
+  <div class="mobile-action-bar">
+    <div class="mobile-action-grid">
+      <a href="tel:+919876543210" class="btn btn-dark phone-link" style="padding: 10px; font-size: 0.88rem;">
+        <i class="fa-solid fa-phone"></i> Call Now
+      </a>
+      <a href="https://wa.me/91XXXXXXXXXX?text=Hello%20Ganesh%20Towers%2C%20I%20am%20interested%20in%20your%20flats." 
+         class="btn btn-whatsapp mobile-wa-link" target="_blank" rel="noopener" style="padding: 10px; font-size: 0.88rem;">
+        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL: UNIT SPECIFICATIONS & DETAILS
+       ========================================================================== -->
+  <div class="modal-overlay" id="specModal" onclick="closeModalOnOverlay(event)">
+    <div class="modal-content">
+      <button class="modal-close-btn" onclick="closeSpecModal()"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modalBody">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       LIGHTBOX MODAL FOR GALLERY
+       ========================================================================== -->
+  <div class="modal-overlay" id="lightboxModal" onclick="closeModalOnOverlay(event)">
+    <div class="modal-content" style="max-width: 850px; padding: 16px; background: transparent; box-shadow: none;">
+      <button class="modal-close-btn" style="background: rgba(255,255,255,0.9); top: 24px; right: 24px;" onclick="closeLightbox()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <img id="lightboxImg" src="" alt="Enlarged view" style="border-radius: var(--radius-lg); width: 100%; max-height: 75vh; object-fit: contain; box-shadow: var(--shadow-xl);">
+      <div id="lightboxTitle" style="color: white; text-align: center; margin-top: 14px; font-size: 1.15rem; font-weight: 600;"></div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       JAVASCRIPT LOGIC
+       ========================================================================== -->
+  <script>
+    /**
+     * CONFIGURATION
+     * Replace these details with your active contact numbers & preferences.
+     */
+    const SITE_CONFIG = {
+      // Set your actual WhatsApp number with Country Code (no plus, spaces or dashes)
+      // Example: "919876543210" for India
+      whatsappNumber: "91XXXXXXXXXX",
+
+      // Display phone number for calling
+      phoneDisplay: "+91 9XXXXXXXXX",
+      phoneDial: "+919876543210",
+
+      // Contact Email
+      email: "ganeshtowers.anaparthi@gmail.com",
+
+      // Address
+      address: "Ganesh Towers, Anaparthi, East Godavari, Andhra Pradesh - 533342"
+    };
+
+    // Auto-update links matching configuration
+    document.addEventListener("DOMContentLoaded", () => {
+      // Update year
+      const yearSpan = document.getElementById("currentYear");
+      if (yearSpan) yearSpan.textContent = new Date().getFullYear();
+
+      // Update phone links
+      document.querySelectorAll(".phone-link").forEach(el => {
+        el.href = `tel:${SITE_CONFIG.phoneDial}`;
+        if (el.textContent.includes("9XXXXXXXXX") || el.textContent.includes("Direct Enquiry")) {
+          el.innerHTML = `<i class="fa-solid fa-phone"></i> Direct Enquiry: ${SITE_CONFIG.phoneDisplay}`;
+        }
+      });
+      document.querySelectorAll(".phone-display").forEach(el => {
+        el.textContent = SITE_CONFIG.phoneDisplay;
+      });
+
+      // Update WhatsApp floating link
+      const floatWa = document.getElementById("floatingWhatsApp");
+      if (floatWa) {
+        floatWa.href = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=Hello%20Ganesh%20Towers%2C%20I%20am%20interested%20in%20the%20apartments.`;
+      }
+      const contactWaBtn = document.getElementById("contactWhatsAppBtn");
+      if (contactWaBtn) {
+        contactWaBtn.href = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=Hello%20Ganesh%20Towers%2C%20I%20would%20like%20to%20enquire%20about%20available%20flats%20for%20rent%20and%20sale.`;
+      }
+      const mobileWa = document.querySelector(".mobile-wa-link");
+      if (mobileWa) {
+        mobileWa.href = `https://wa.me/${SITE_CONFIG.whatsappNumber}?text=Hello%20Ganesh%20Towers%2C%20I%20am%20interested%20in%20your%20flats.`;
+      }
+
+      // Initialize EMI calculator
+      calculateEMI();
+    });
+
+    /* Mobile Navigation Drawer */
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navMenu = document.getElementById('navMenu');
+
+    if (mobileToggle && navMenu) {
+      mobileToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+        const icon = mobileToggle.querySelector('i');
+        if (navMenu.classList.contains('open')) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        } else {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      });
+
+      // Close menu on link click
+      navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navMenu.classList.remove('open');
+          const icon = mobileToggle.querySelector('i');
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        });
+      });
+    }
+
+    /* Active Nav Highlighting on Scroll */
+    window.addEventListener('scroll', () => {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(current => {
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 100;
+        const sectionId = current.getAttribute('id');
+        const navItem = document.querySelector(`.nav-menu a[href*='${sectionId}']`);
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+          if (navItem) navItem.classList.add('active');
+        } else {
+          if (navItem) navItem.classList.remove('active');
+        }
+      });
+    });
+
+    /* Flat Filter (All / Rent / Sale) */
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const flatCards = document.querySelectorAll('.flat-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+
+        flatCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    /* Helper: Send WhatsApp Enquiry */
+    function sendWhatsAppEnquiry(flatName) {
+      const message = `Hello Ganesh Towers, I am interested in ${flatName} at Anaparthi. Please share current availability, pricing, and visit schedule.`;
+      const encoded = encodeURIComponent(message);
+      window.open(`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encoded}`, '_blank');
+    }
+
+    /* Modal: Unit Specifications */
+    function openSpecModal(title, area, facing, config, price, image) {
+      const modal = document.getElementById('specModal');
+      const body = document.getElementById('modalBody');
+
+      body.innerHTML = `
+        <div style="display: flex; gap: 20px; align-items: center; margin-bottom: 20px; border-bottom: 1px solid var(--slate-200); padding-bottom: 16px;">
+          <img src="${image}" alt="${title}" style="width: 110px; height: 90px; object-fit: cover; border-radius: var(--radius-md);">
+          <div>
+            <span class="badge-tag" style="margin-bottom: 6px;"><i class="fa-solid fa-home"></i> Floor Specification</span>
+            <h3 style="font-size: 1.4rem; margin: 0;">${title}</h3>
+            <p style="color: var(--accent-gold); font-weight: 700; font-size: 1.1rem; margin: 4px 0 0 0;">${price}</p>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px;">
+          <div style="background: var(--slate-50); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--slate-200);">
+            <strong style="color: var(--slate-900); display: block; font-size: 0.85rem;">Super Built-up Area:</strong>
+            <span style="color: var(--slate-700); font-size: 0.95rem;">${area}</span>
+          </div>
+          <div style="background: var(--slate-50); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--slate-200);">
+            <strong style="color: var(--slate-900); display: block; font-size: 0.85rem;">Facing &amp; Vastu:</strong>
+            <span style="color: var(--slate-700); font-size: 0.95rem;">${facing} (100% Vastu)</span>
+          </div>
+          <div style="background: var(--slate-50); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--slate-200);">
+            <strong style="color: var(--slate-900); display: block; font-size: 0.85rem;">Configuration:</strong>
+            <span style="color: var(--slate-700); font-size: 0.95rem;">${config}</span>
+          </div>
+          <div style="background: var(--slate-50); padding: 12px; border-radius: var(--radius-sm); border: 1px solid var(--slate-200);">
+            <strong style="color: var(--slate-900); display: block; font-size: 0.85rem;">Flooring &amp; Electrical:</strong>
+            <span style="color: var(--slate-700); font-size: 0.95rem;">Vitrified Tiles • Modular Switches</span>
+          </div>
+        </div>
+
+        <h4 style="font-size: 1.05rem; margin-bottom: 10px;">Highlights of this Unit:</h4>
+        <ul style="color: var(--slate-600); font-size: 0.92rem; line-height: 1.8; margin-left: 20px; margin-bottom: 24px;">
+          <li>Ample cross-ventilation with generous open windows</li>
+          <li>Provision for RO water filter, chimney, and AC in master bedroom</li>
+          <li>Dedicated power backup point for lights and fans</li>
+          <li>Elevator access with power backup &amp; covered parking</li>
+        </ul>
+
+        <div style="display: flex; gap: 12px;">
+          <button class="btn btn-whatsapp" style="flex: 1;" onclick="sendWhatsAppEnquiry('${title}')">
+            <i class="fa-brands fa-whatsapp"></i> Inquire via WhatsApp
+          </button>
+          <button class="btn btn-dark" onclick="closeSpecModal()">Close</button>
+        </div>
+      `;
+
+      modal.classList.add('active');
+    }
+
+    function closeSpecModal() {
+      document.getElementById('specModal').classList.remove('active');
+    }
+
+    function closeModalOnOverlay(e) {
+      if (e.target.classList.contains('modal-overlay')) {
+        e.target.classList.remove('active');
+      }
+    }
+
+    /* Lightbox Modal */
+    function openLightbox(imgSrc, title) {
+      const modal = document.getElementById('lightboxModal');
+      document.getElementById('lightboxImg').src = imgSrc;
+      document.getElementById('lightboxTitle').textContent = title;
+      modal.classList.add('active');
+    }
+
+    function closeLightbox() {
+      document.getElementById('lightboxModal').classList.remove('active');
+    }
+
+    /* FAQ Accordion Toggle */
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+      const header = item.querySelector('.faq-header');
+      header.addEventListener('click', () => {
+        const isOpen = item.classList.contains('active');
+        faqItems.forEach(i => i.classList.remove('active'));
+        if (!isOpen) item.classList.add('active');
+      });
+    });
+
+    /* EMI Calculator Logic */
+    const loanAmountSlider = document.getElementById('loanAmountSlider');
+    const interestRateSlider = document.getElementById('interestRateSlider');
+    const loanTenureSlider = document.getElementById('loanTenureSlider');
+
+    const loanAmountText = document.getElementById('loanAmountText');
+    const interestRateText = document.getElementById('interestRateText');
+    const loanTenureText = document.getElementById('loanTenureText');
+
+    const monthlyEmiResult = document.getElementById('monthlyEmiResult');
+    const principalResult = document.getElementById('principalResult');
+    const totalInterestResult = document.getElementById('totalInterestResult');
+    const totalPaymentResult = document.getElementById('totalPaymentResult');
+
+    function formatINR(number) {
+      return '₹' + Math.round(number).toLocaleString('en-IN');
+    }
+
+    function calculateEMI() {
+      const P = parseFloat(loanAmountSlider.value);
+      const annualR = parseFloat(interestRateSlider.value);
+      const N = parseFloat(loanTenureSlider.value) * 12;
+
+      loanAmountText.textContent = formatINR(P);
+      interestRateText.textContent = `${annualR.toFixed(1)}%`;
+      loanTenureText.textContent = `${loanTenureSlider.value} Years`;
+
+      const monthlyR = (annualR / 12) / 100;
+      const emi = (P * monthlyR * Math.pow(1 + monthlyR, N)) / (Math.pow(1 + monthlyR, N) - 1);
+      const totalPayment = emi * N;
+      const totalInterest = totalPayment - P;
+
+      monthlyEmiResult.textContent = formatINR(emi);
+      principalResult.textContent = formatINR(P);
+      totalInterestResult.textContent = formatINR(totalInterest);
+      totalPaymentResult.textContent = formatINR(totalPayment);
+    }
+
+    if (loanAmountSlider && interestRateSlider && loanTenureSlider) {
+      loanAmountSlider.addEventListener('input', calculateEMI);
+      interestRateSlider.addEventListener('input', calculateEMI);
+      loanTenureSlider.addEventListener('input', calculateEMI);
+    }
+
+    /* Quick Enquiry Form Handler */
+    const quickForm = document.getElementById('quickEnquiryForm');
+    if (quickForm) {
+      quickForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('quickName').value.trim();
+        const phone = document.getElementById('quickPhone').value.trim();
+        const type = document.getElementById('quickType').value;
+
+        const msg = `Hello Ganesh Towers, My name is ${name} (${phone}). I am interested in: ${type} at Anaparthi. Please send me pricing and floor plan details.`;
+        window.open(`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
+      });
+    }
+
+    /* Main Contact / Site Visit Form Handler */
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('formName').value.trim();
+        const phone = document.getElementById('formPhone').value.trim();
+        const category = document.getElementById('formCategory').value;
+        const date = document.getElementById('formDate').value || 'Immediate / Flexible';
+        const notes = document.getElementById('formMessage').value.trim();
+
+        const msg = `Hello Ganesh Towers,\n*Site Visit / Property Booking Inquiry*\n• Name: ${name}\n• Phone: ${phone}\n• Requirement: ${category}\n• Preferred Date: ${date}\n• Notes: ${notes ? notes : 'None'}`;
+
+        window.open(`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(msg)}`, '_blank');
+        alert("Thank you! Opening WhatsApp to send your site visit request directly to the management.");
+      });
+    }
+  </script>
 </body>
 </html>
