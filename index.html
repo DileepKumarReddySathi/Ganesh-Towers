@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ganesh Towers | 16 Flats Floor-Wise Directory (Anaparthi)</title>
+  <title>Ganesh Towers | 16 East-Facing Flats Directory (Anaparthi)</title>
   
-  <meta name="description" content="Explore all 16 flats at Ganesh Towers, Anaparthi floor-wise. 4 floors with 2 front view flats and 2 back view flats on each floor. 2 & 3 BHK flats for rent and sale.">
-  <meta property="og:title" content="Ganesh Towers - 16 Flats Floor-Wise Directory">
-  <meta property="og:description" content="Floor-wise directory of all 16 flats at Ganesh Towers, Anaparthi. 2 Front View + 2 Back View flats per floor.">
+  <meta name="description" content="Explore all 16 100% East-Facing flats at Ganesh Towers, Anaparthi floor-wise. 4 floors with 2 front view and 2 back view flats per floor. Flats 104, 204, 304, 404 fully closed without balcony. 1st & 2nd floor get 1 car + 2 bike parking.">
+  <meta property="og:title" content="Ganesh Towers - 16 East Facing Flats Directory">
+  <meta property="og:description" content="100% East Facing 16 flats floor-wise directory. 2 Front + 2 Back view flats per floor. Parking: Floors 1 & 2 (1 Car + 2 Bikes), Floors 3 & 4 (2 Bikes).">
   <meta property="og:image" content="images/ganesh-towers-elevation.jpg">
 
   <!-- Google Fonts: Plus Jakarta Sans & Outfit -->
@@ -26,6 +26,7 @@
       --accent-gold: #c69222;
       --accent-gold-light: #fef8eb;
       --emerald: #10b981;
+      --emerald-dark: #047857;
       --emerald-light: #ecfdf5;
       --blue: #2563eb;
       --blue-light: #eff6ff;
@@ -213,7 +214,7 @@
       overflow: hidden;
       box-shadow: var(--shadow-lg);
       border: 3px solid var(--white);
-      max-height: 380px;
+      max-height: 390px;
     }
 
     .hero-photo-wrapper img {
@@ -237,38 +238,44 @@
 
     .hero-details h2 {
       font-size: clamp(1.8rem, 3vw, 2.4rem);
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .hero-details p {
       color: var(--slate-600);
-      font-size: 1rem;
-      margin-bottom: 22px;
+      font-size: 0.98rem;
+      margin-bottom: 20px;
     }
 
     .building-summary-badges {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 24px;
+      gap: 10px;
+      margin-bottom: 22px;
     }
 
     .summary-badge {
       background: var(--slate-100);
       border: 1px solid var(--slate-200);
-      padding: 8px 14px;
+      padding: 7px 12px;
       border-radius: var(--radius-md);
       display: flex;
       align-items: center;
       gap: 8px;
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       font-weight: 600;
       color: var(--slate-800);
     }
 
     .summary-badge i {
       color: var(--accent-gold);
-      font-size: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .summary-badge.highlight-east {
+      background: rgba(201, 147, 42, 0.12);
+      border-color: rgba(201, 147, 42, 0.4);
+      color: #8c6008;
     }
 
     /* DIRECTORY CONTROLS & FILTER BAR */
@@ -388,13 +395,17 @@
       color: #94a3b8;
     }
 
-    .floor-layout-desc {
-      background: rgba(255,255,255,0.1);
-      padding: 5px 12px;
+    .floor-parking-badge {
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fde68a;
+      padding: 6px 14px;
       border-radius: var(--radius-full);
-      font-size: 0.8rem;
-      color: #e2e8f0;
-      border: 1px solid rgba(255,255,255,0.15);
+      font-size: 0.82rem;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
     }
 
     /* FLATS SPLIT: 2 FRONT + 2 BACK */
@@ -434,11 +445,11 @@
     }
 
     .wing-title.front i {
-      color: #ea580c; /* Orange sun for front view */
+      color: #ea580c; /* Orange sun */
     }
 
     .wing-title.back i {
-      color: #0284c7; /* Cool breeze for back view */
+      color: #0284c7; /* Cool breeze */
     }
 
     .wing-badge {
@@ -478,11 +489,15 @@
       border-color: var(--accent-gold);
     }
 
+    .flat-card.fully-closed {
+      border-left: 4px solid #0284c7;
+    }
+
     .flat-top-row {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .flat-number-box {
@@ -498,7 +513,7 @@
 
     /* Status Badges */
     .status-badge {
-      font-size: 0.74rem;
+      font-size: 0.72rem;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
@@ -509,7 +524,7 @@
 
     .status-badge.rent {
       background: var(--emerald-light);
-      color: #047857;
+      color: var(--emerald-dark);
       border: 1px solid #a7f3d0;
     }
 
@@ -531,29 +546,60 @@
       border: 1px solid #bfdbfe;
     }
 
+    .closed-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #f0f9ff;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      font-size: 0.74rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
     .flat-type-title {
       font-size: 1.05rem;
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
     .flat-features-list {
       list-style: none;
       font-size: 0.82rem;
       color: var(--slate-600);
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       line-height: 1.6;
     }
 
     .flat-features-list li {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 6px;
       margin-bottom: 4px;
     }
 
     .flat-features-list li i {
       color: var(--emerald);
-      font-size: 0.75rem;
+      font-size: 0.78rem;
+      margin-top: 3px;
+    }
+
+    .flat-features-list li.east-highlight i {
+      color: var(--accent-gold);
+    }
+
+    .flat-features-list li.parking-row {
+      background: var(--slate-50);
+      padding: 4px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+      color: var(--slate-800);
+    }
+
+    .flat-features-list li.parking-row i {
+      color: #2563eb;
     }
 
     .flat-bottom {
@@ -581,16 +627,97 @@
       background: #fafafa;
       border: 2px dashed var(--slate-300);
       border-radius: var(--radius-xl);
-      padding: 24px;
+      padding: 28px;
       margin-bottom: 40px;
+    }
+
+    .ground-header {
       text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .ground-header h4 {
+      font-size: 1.35rem;
+      color: var(--primary);
+    }
+
+    .ground-header p {
+      font-size: 0.92rem;
+      color: var(--slate-600);
+      max-width: 680px;
+      margin: 4px auto 0 auto;
+    }
+
+    /* Dedicated Parking Allocation Banner */
+    .parking-allocation-card {
+      background: var(--white);
+      border: 2px solid var(--accent-gold);
+      border-radius: var(--radius-lg);
+      padding: 20px 24px;
+      margin-bottom: 22px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .parking-allocation-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .parking-allocation-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .parking-rule-box {
+      background: var(--slate-50);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 16px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .parking-rule-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--primary);
+      color: var(--white);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+
+    .parking-rule-icon.bikes-only {
+      background: var(--accent-gold);
+    }
+
+    .parking-rule-text strong {
+      display: block;
+      font-size: 0.96rem;
+      color: var(--slate-900);
+      margin-bottom: 2px;
+    }
+
+    .parking-rule-text span {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 700;
     }
 
     .ground-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 16px;
-      margin-top: 16px;
       text-align: left;
     }
 
@@ -725,6 +852,9 @@
         grid-template-columns: 1fr;
         gap: 20px;
       }
+      .parking-allocation-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 640px) {
@@ -756,7 +886,7 @@
         <div class="brand-icon"><i class="fa-solid fa-building"></i></div>
         <div class="brand-info">
           <h1>Ganesh Towers</h1>
-          <span>16 Flats Floor-Wise Directory • Anaparthi</span>
+          <span>16 East-Facing Flats Directory • Anaparthi</span>
         </div>
       </div>
       <div class="header-actions">
@@ -785,19 +915,21 @@
         </div>
 
         <div class="hero-details">
-          <h2>16 Apartments • Floor-Wise Layout</h2>
+          <h2>16 Apartments • 100% East Facing</h2>
           <p>
-            Welcome to the official flats directory of <strong>Ganesh Towers</strong> in Anaparthi. 
-            The building comprises <strong>4 residential floors</strong>, each containing <strong>2 Front View flats (Facing Road)</strong> and <strong>2 Back View flats (Quiet &amp; Open Breeze)</strong>, with covered stilt vehicle parking on the ground floor.
+            Welcome to the official directory of <strong>Ganesh Towers</strong> in Anaparthi. 
+            All 16 apartments are <strong>100% East Facing</strong> according to Vedic Vastu. 
+            Each residential floor features <strong>2 Front View flats (Road Facing)</strong> and <strong>2 Back View flats</strong>. 
+            Flats <strong>104, 204, 304, and 404</strong> are designed as fully closed layouts without balconies for extra living space.
           </p>
 
           <div class="building-summary-badges">
-            <div class="summary-badge"><i class="fa-solid fa-layer-group"></i> 4 Floors (16 Total Flats)</div>
-            <div class="summary-badge"><i class="fa-solid fa-compass"></i> 2 Front + 2 Back Per Floor</div>
-            <div class="summary-badge"><i class="fa-solid fa-elevator"></i> Passenger Lift with ARD</div>
-            <div class="summary-badge"><i class="fa-solid fa-bolt"></i> 24/7 Generator Backup</div>
-            <div class="summary-badge"><i class="fa-solid fa-square-parking"></i> Covered Stilt Parking</div>
-            <div class="summary-badge"><i class="fa-solid fa-sun"></i> 100% Vastu Compliant</div>
+            <div class="summary-badge highlight-east"><i class="fa-solid fa-compass"></i> All 16 Flats 100% East Facing</div>
+            <div class="summary-badge"><i class="fa-solid fa-layer-group"></i> 4 Floors (2 Front + 2 Back Per Floor)</div>
+            <div class="summary-badge"><i class="fa-solid fa-car"></i> 1st &amp; 2nd Floor: 1 Car + 2 Bike Parking</div>
+            <div class="summary-badge"><i class="fa-solid fa-motorcycle"></i> 3rd &amp; 4th Floor: 2 Bike Parking</div>
+            <div class="summary-badge"><i class="fa-solid fa-door-closed"></i> Flats 104, 204, 304, 404 Fully Closed (No Balcony)</div>
+            <div class="summary-badge"><i class="fa-solid fa-elevator"></i> Passenger Lift with ARD &amp; Generator</div>
           </div>
 
           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
@@ -852,11 +984,11 @@
             <div class="floor-number-badge">4</div>
             <div>
               <h3>Fourth Floor (Top Floor)</h3>
-              <span>4 Flats • Panoramic Open Views &amp; Terrific Breeze</span>
+              <span>4 Flats • All 100% East Facing • Panoramic Open Views</span>
             </div>
           </div>
-          <div class="floor-layout-desc">
-            <i class="fa-solid fa-door-open"></i> Flats 401, 402 (Front) &nbsp;|&nbsp; Flats 403, 404 (Back)
+          <div class="floor-parking-badge">
+            <i class="fa-solid fa-motorcycle"></i> Parking: 2 Bike Parking (Dedicated)
           </div>
         </div>
 
@@ -866,8 +998,8 @@
             <!-- 4TH FLOOR: FRONT VIEW (2 FLATS) -->
             <div class="wing-col wing-front">
               <div class="wing-header">
-                <div class="wing-title front"><i class="fa-solid fa-sun"></i> Front View Wing</div>
-                <span class="wing-badge">Facing Main Road</span>
+                <div class="wing-title front"><i class="fa-solid fa-sun"></i> Front View Wing (Road Facing)</div>
+                <span class="wing-badge">Balcony Included</span>
               </div>
               <div class="flats-pair-grid">
                 
@@ -880,10 +1012,10 @@
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Front View (Left)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Balcony:</strong> Road Facing</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> East Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 3 Bedrooms, 3 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Left)</li>
+                      <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Road View Balcony</li>
+                      <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -891,7 +1023,7 @@
                       <span>Rent / Month</span>
                       <strong style="color: var(--emerald);">Enquire for Rent</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 401', '4th Floor', 'Front View (3 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 401', '4th Floor', 'Front View 3 BHK (East Facing with Road Balcony & 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 401
                     </button>
                   </div>
@@ -906,10 +1038,10 @@
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Front View (Right)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Balcony:</strong> Road Facing</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> North Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 3 Bedrooms, 3 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Right)</li>
+                      <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Road View Balcony</li>
+                      <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -917,7 +1049,7 @@
                       <span>Ownership</span>
                       <strong style="color: var(--accent-gold);">Price on Request</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 402', '4th Floor', 'Front View (3 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 402', '4th Floor', 'Front View 3 BHK (East Facing with Road Balcony & 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 402
                     </button>
                   </div>
@@ -929,8 +1061,8 @@
             <!-- 4TH FLOOR: BACK VIEW (2 FLATS) -->
             <div class="wing-col wing-back">
               <div class="wing-header">
-                <div class="wing-title back"><i class="fa-solid fa-wind"></i> Back View Wing</div>
-                <span class="wing-badge">Peaceful &amp; Greenery</span>
+                <div class="wing-title back"><i class="fa-solid fa-wind"></i> Back View Wing (Quiet &amp; Open)</div>
+                <span class="wing-badge">Peaceful Setting</span>
               </div>
               <div class="flats-pair-grid">
                 
@@ -943,10 +1075,10 @@
                     </div>
                     <h4 class="flat-type-title">2 BHK Comfort Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Back View (Left)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vibe:</strong> Quiet &amp; Airy</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> East Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 2 Bedrooms, 2 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Left)</li>
+                      <li><i class="fa-solid fa-wind"></i> <strong>Balcony:</strong> Utility Balcony</li>
+                      <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -954,25 +1086,26 @@
                       <span>Rent / Month</span>
                       <strong style="color: var(--emerald);">Enquire for Rent</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 403', '4th Floor', 'Back View (2 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 403', '4th Floor', 'Back View 2 BHK (East Facing with Utility Balcony & 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 403
                     </button>
                   </div>
                 </div>
 
-                <!-- FLAT 404 -->
-                <div class="flat-card" data-wing="back" data-status="available">
+                <!-- FLAT 404 (FULLY CLOSED - NO BALCONY) -->
+                <div class="flat-card fully-closed" data-wing="back" data-status="available">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 404</div>
                       <span class="status-badge available">Rent / Sale</span>
                     </div>
-                    <h4 class="flat-type-title">2 BHK Comfort Flat</h4>
+                    <div class="closed-pill"><i class="fa-solid fa-door-closed"></i> Fully Closed Flat • No Balcony</div>
+                    <h4 class="flat-type-title">2 BHK Fully Closed Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Back View (Right)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vibe:</strong> Peaceful Setting</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> North Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 2 Bedrooms, 2 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-expand"></i> <strong>Layout:</strong> Without Balcony (Max Room Space)</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Right)</li>
+                      <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -980,7 +1113,7 @@
                       <span>Availability</span>
                       <strong>Ready to Move</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 404', '4th Floor', 'Back View (2 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 404', '4th Floor', 'Back View 2 BHK (East Facing Fully Closed Without Balcony & 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 404
                     </button>
                   </div>
@@ -1000,11 +1133,11 @@
             <div class="floor-number-badge">3</div>
             <div>
               <h3>Third Floor</h3>
-              <span>4 Flats • Excellent Height, Natural Light &amp; Privacy</span>
+              <span>4 Flats • All 100% East Facing • Natural Light &amp; Breezeway</span>
             </div>
           </div>
-          <div class="floor-layout-desc">
-            <i class="fa-solid fa-door-open"></i> Flats 301, 302 (Front) &nbsp;|&nbsp; Flats 303, 304 (Back)
+          <div class="floor-parking-badge">
+            <i class="fa-solid fa-motorcycle"></i> Parking: 2 Bike Parking (Dedicated)
           </div>
         </div>
 
@@ -1014,8 +1147,8 @@
             <!-- 3RD FLOOR: FRONT VIEW (2 FLATS) -->
             <div class="wing-col wing-front">
               <div class="wing-header">
-                <div class="wing-title front"><i class="fa-solid fa-sun"></i> Front View Wing</div>
-                <span class="wing-badge">Facing Main Road</span>
+                <div class="wing-title front"><i class="fa-solid fa-sun"></i> Front View Wing (Road Facing)</div>
+                <span class="wing-badge">Balcony Included</span>
               </div>
               <div class="flats-pair-grid">
                 
@@ -1028,10 +1161,10 @@
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Front View (Left)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Balcony:</strong> Open Road View</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> East Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 3 Bedrooms, 3 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Left)</li>
+                      <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Open Road Balcony</li>
+                      <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -1039,7 +1172,7 @@
                       <span>Rent / Month</span>
                       <strong style="color: var(--emerald);">Enquire for Rent</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 301', '3rd Floor', 'Front View (3 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 301', '3rd Floor', 'Front View 3 BHK (East Facing with Road Balcony & 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 301
                     </button>
                   </div>
@@ -1054,10 +1187,10 @@
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Front View (Right)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Balcony:</strong> Open Road View</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> North Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 3 Bedrooms, 3 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Right)</li>
+                      <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Open Road Balcony</li>
+                      <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -1065,7 +1198,7 @@
                       <span>Ownership</span>
                       <strong style="color: var(--accent-gold);">Price on Request</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 302', '3rd Floor', 'Front View (3 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 302', '3rd Floor', 'Front View 3 BHK (East Facing with Road Balcony & 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 302
                     </button>
                   </div>
@@ -1077,8 +1210,8 @@
             <!-- 3RD FLOOR: BACK VIEW (2 FLATS) -->
             <div class="wing-col wing-back">
               <div class="wing-header">
-                <div class="wing-title back"><i class="fa-solid fa-wind"></i> Back View Wing</div>
-                <span class="wing-badge">Peaceful &amp; Greenery</span>
+                <div class="wing-title back"><i class="fa-solid fa-wind"></i> Back View Wing (Quiet &amp; Open)</div>
+                <span class="wing-badge">Peaceful Setting</span>
               </div>
               <div class="flats-pair-grid">
                 
@@ -1091,10 +1224,10 @@
                     </div>
                     <h4 class="flat-type-title">2 BHK Comfort Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Back View (Left)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vibe:</strong> Cross-Ventilated</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> East Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 2 Bedrooms, 2 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Left)</li>
+                      <li><i class="fa-solid fa-wind"></i> <strong>Balcony:</strong> Utility Balcony</li>
+                      <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -1102,25 +1235,26 @@
                       <span>Rent / Month</span>
                       <strong style="color: var(--emerald);">Enquire for Rent</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 303', '3rd Floor', 'Back View (2 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 303', '3rd Floor', 'Back View 2 BHK (East Facing with Utility Balcony & 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 303
                     </button>
                   </div>
                 </div>
 
-                <!-- FLAT 304 -->
-                <div class="flat-card" data-wing="back" data-status="rent">
+                <!-- FLAT 304 (FULLY CLOSED - NO BALCONY) -->
+                <div class="flat-card fully-closed" data-wing="back" data-status="rent">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 304</div>
                       <span class="status-badge rent">For Rent</span>
                     </div>
-                    <h4 class="flat-type-title">2 BHK Comfort Flat</h4>
+                    <div class="closed-pill"><i class="fa-solid fa-door-closed"></i> Fully Closed Flat • No Balcony</div>
+                    <h4 class="flat-type-title">2 BHK Fully Closed Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Back View (Right)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vibe:</strong> Quiet &amp; Serene</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> North Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 2 Bedrooms, 2 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-expand"></i> <strong>Layout:</strong> Without Balcony (Max Room Space)</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Right)</li>
+                      <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -1128,7 +1262,7 @@
                       <span>Rent / Month</span>
                       <strong style="color: var(--emerald);">Enquire for Rent</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 304', '3rd Floor', 'Back View (2 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 304', '3rd Floor', 'Back View 2 BHK (East Facing Fully Closed Without Balcony & 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 304
                     </button>
                   </div>
@@ -1148,11 +1282,11 @@
             <div class="floor-number-badge">2</div>
             <div>
               <h3>Second Floor</h3>
-              <span>4 Flats • Ideal Mid-Level Elevation with Great Breezeway</span>
+              <span>4 Flats • All 100% East Facing • Mid-Level Prime Living</span>
             </div>
           </div>
-          <div class="floor-layout-desc">
-            <i class="fa-solid fa-door-open"></i> Flats 201, 202 (Front) &nbsp;|&nbsp; Flats 203, 204 (Back)
+          <div class="floor-parking-badge" style="background: rgba(16, 185, 129, 0.2); border-color: #34d399; color: #a7f3d0;">
+            <i class="fa-solid fa-car"></i> 1 Car Parking + 2 Bike Parking (Dedicated)
           </div>
         </div>
 
@@ -1162,8 +1296,8 @@
             <!-- 2ND FLOOR: FRONT VIEW (2 FLATS) -->
             <div class="wing-col wing-front">
               <div class="wing-header">
-                <div class="wing-title front"><i class="fa-solid fa-sun"></i> Front View Wing</div>
-                <span class="wing-badge">Facing Main Road</span>
+                <div class="wing-title front"><i class="fa-solid fa-sun"></i> Front View Wing (Road Facing)</div>
+                <span class="wing-badge">Balcony Included</span>
               </div>
               <div class="flats-pair-grid">
                 
@@ -1176,10 +1310,10 @@
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Front View (Left)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Balcony:</strong> Road Facing</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> East Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 3 Bedrooms, 3 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Left)</li>
+                      <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Road View Balcony</li>
+                      <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -1187,7 +1321,7 @@
                       <span>Rent / Month</span>
                       <strong style="color: var(--emerald);">Enquire for Rent</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 201', '2nd Floor', 'Front View (3 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 201', '2nd Floor', 'Front View 3 BHK (East Facing with 1 Car + 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 201
                     </button>
                   </div>
@@ -1202,10 +1336,10 @@
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Front View (Right)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Balcony:</strong> Road Facing</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> North Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 3 Bedrooms, 3 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Right)</li>
+                      <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Road View Balcony</li>
+                      <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -1213,7 +1347,7 @@
                       <span>Ownership</span>
                       <strong style="color: var(--accent-gold);">Price on Request</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 202', '2nd Floor', 'Front View (3 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 202', '2nd Floor', 'Front View 3 BHK (East Facing with 1 Car + 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 202
                     </button>
                   </div>
@@ -1225,8 +1359,8 @@
             <!-- 2ND FLOOR: BACK VIEW (2 FLATS) -->
             <div class="wing-col wing-back">
               <div class="wing-header">
-                <div class="wing-title back"><i class="fa-solid fa-wind"></i> Back View Wing</div>
-                <span class="wing-badge">Peaceful &amp; Greenery</span>
+                <div class="wing-title back"><i class="fa-solid fa-wind"></i> Back View Wing (Quiet &amp; Open)</div>
+                <span class="wing-badge">Peaceful Setting</span>
               </div>
               <div class="flats-pair-grid">
                 
@@ -1239,10 +1373,10 @@
                     </div>
                     <h4 class="flat-type-title">2 BHK Comfort Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Back View (Left)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vibe:</strong> Quiet Residential</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> East Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 2 Bedrooms, 2 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Left)</li>
+                      <li><i class="fa-solid fa-wind"></i> <strong>Balcony:</strong> Utility Balcony</li>
+                      <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -1250,25 +1384,26 @@
                       <span>Rent / Month</span>
                       <strong style="color: var(--emerald);">Enquire for Rent</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 203', '2nd Floor', 'Back View (2 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 203', '2nd Floor', 'Back View 2 BHK (East Facing with 1 Car + 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 203
                     </button>
                   </div>
                 </div>
 
-                <!-- FLAT 204 -->
-                <div class="flat-card" data-wing="back" data-status="rent">
+                <!-- FLAT 204 (FULLY CLOSED - NO BALCONY) -->
+                <div class="flat-card fully-closed" data-wing="back" data-status="rent">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 204</div>
                       <span class="status-badge rent">For Rent</span>
                     </div>
-                    <h4 class="flat-type-title">2 BHK Comfort Flat</h4>
+                    <div class="closed-pill"><i class="fa-solid fa-door-closed"></i> Fully Closed Flat • No Balcony</div>
+                    <h4 class="flat-type-title">2 BHK Fully Closed Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Back View (Right)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vibe:</strong> Peaceful Setting</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> North Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 2 Bedrooms, 2 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-expand"></i> <strong>Layout:</strong> Without Balcony (Max Room Space)</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Right)</li>
+                      <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -1276,7 +1411,7 @@
                       <span>Rent / Month</span>
                       <strong style="color: var(--emerald);">Enquire for Rent</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 204', '2nd Floor', 'Back View (2 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 204', '2nd Floor', 'Back View 2 BHK (East Facing Fully Closed Without Balcony & 1 Car + 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 204
                     </button>
                   </div>
@@ -1296,11 +1431,11 @@
             <div class="floor-number-badge">1</div>
             <div>
               <h3>First Floor</h3>
-              <span>4 Flats • Quick Access &amp; Highly Convenient for Families</span>
+              <span>4 Flats • All 100% East Facing • Quick Access &amp; Highly Convenient</span>
             </div>
           </div>
-          <div class="floor-layout-desc">
-            <i class="fa-solid fa-door-open"></i> Flats 101, 102 (Front) &nbsp;|&nbsp; Flats 103, 104 (Back)
+          <div class="floor-parking-badge" style="background: rgba(16, 185, 129, 0.2); border-color: #34d399; color: #a7f3d0;">
+            <i class="fa-solid fa-car"></i> 1 Car Parking + 2 Bike Parking (Dedicated)
           </div>
         </div>
 
@@ -1310,8 +1445,8 @@
             <!-- 1ST FLOOR: FRONT VIEW (2 FLATS) -->
             <div class="wing-col wing-front">
               <div class="wing-header">
-                <div class="wing-title front"><i class="fa-solid fa-sun"></i> Front View Wing</div>
-                <span class="wing-badge">Facing Main Road</span>
+                <div class="wing-title front"><i class="fa-solid fa-sun"></i> Front View Wing (Road Facing)</div>
+                <span class="wing-badge">Balcony Included</span>
               </div>
               <div class="flats-pair-grid">
                 
@@ -1324,10 +1459,10 @@
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Front View (Left)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Balcony:</strong> Direct Road View</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> East Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 3 Bedrooms, 3 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Left)</li>
+                      <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Direct Road Balcony</li>
+                      <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -1335,7 +1470,7 @@
                       <span>Rent / Month</span>
                       <strong style="color: var(--emerald);">Enquire for Rent</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 101', '1st Floor', 'Front View (3 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 101', '1st Floor', 'Front View 3 BHK (East Facing with 1 Car + 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 101
                     </button>
                   </div>
@@ -1350,10 +1485,10 @@
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Front View (Right)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Balcony:</strong> Direct Road View</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> North Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 3 Bedrooms, 3 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Right)</li>
+                      <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Direct Road Balcony</li>
+                      <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -1361,7 +1496,7 @@
                       <span>Ownership</span>
                       <strong style="color: var(--accent-gold);">Price on Request</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 102', '1st Floor', 'Front View (3 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 102', '1st Floor', 'Front View 3 BHK (East Facing with 1 Car + 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 102
                     </button>
                   </div>
@@ -1373,8 +1508,8 @@
             <!-- 1ST FLOOR: BACK VIEW (2 FLATS) -->
             <div class="wing-col wing-back">
               <div class="wing-header">
-                <div class="wing-title back"><i class="fa-solid fa-wind"></i> Back View Wing</div>
-                <span class="wing-badge">Peaceful &amp; Greenery</span>
+                <div class="wing-title back"><i class="fa-solid fa-wind"></i> Back View Wing (Quiet &amp; Open)</div>
+                <span class="wing-badge">Peaceful Setting</span>
               </div>
               <div class="flats-pair-grid">
                 
@@ -1387,10 +1522,10 @@
                     </div>
                     <h4 class="flat-type-title">2 BHK Comfort Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Back View (Left)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vibe:</strong> Quiet &amp; Airy</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> East Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 2 Bedrooms, 2 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Left)</li>
+                      <li><i class="fa-solid fa-wind"></i> <strong>Balcony:</strong> Utility Balcony</li>
+                      <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -1398,25 +1533,26 @@
                       <span>Rent / Month</span>
                       <strong style="color: var(--emerald);">Enquire for Rent</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 103', '1st Floor', 'Back View (2 BHK)')">
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 103', '1st Floor', 'Back View 2 BHK (East Facing with 1 Car + 2 Bike Parking)')">
                       <i class="fa-brands fa-whatsapp"></i> Enquire Flat 103
                     </button>
                   </div>
                 </div>
 
-                <!-- FLAT 104 -->
-                <div class="flat-card" data-wing="back" data-status="occupied">
+                <!-- FLAT 104 (FULLY CLOSED - NO BALCONY) -->
+                <div class="flat-card fully-closed" data-wing="back" data-status="occupied">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 104</div>
                       <span class="status-badge occupied">Occupied</span>
                     </div>
-                    <h4 class="flat-type-title">2 BHK Comfort Flat</h4>
+                    <div class="closed-pill"><i class="fa-solid fa-door-closed"></i> Fully Closed Flat • No Balcony</div>
+                    <h4 class="flat-type-title">2 BHK Fully Closed Flat</h4>
                     <ul class="flat-features-list">
-                      <li><i class="fa-solid fa-check"></i> <strong>Position:</strong> Back View (Right)</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vibe:</strong> Peaceful Setting</li>
-                      <li><i class="fa-solid fa-check"></i> <strong>Vastu:</strong> North Facing Door</li>
-                      <li><i class="fa-solid fa-check"></i> 2 Bedrooms, 2 Baths</li>
+                      <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-expand"></i> <strong>Layout:</strong> Without Balcony (Max Room Space)</li>
+                      <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Right)</li>
+                      <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
                     </ul>
                   </div>
                   <div class="flat-bottom">
@@ -1424,7 +1560,7 @@
                       <span>Status</span>
                       <strong style="color: var(--slate-600);">Currently Rented</strong>
                     </div>
-                    <button class="btn btn-sm btn-primary" onclick="enquireFlat('Flat 104', '1st Floor', 'Back View (2 BHK)')">
+                    <button class="btn btn-sm btn-primary" onclick="enquireFlat('Flat 104', '1st Floor', 'Back View 2 BHK (East Facing Fully Closed Without Balcony & 1 Car + 2 Bike Parking)')">
                       <i class="fa-solid fa-clock"></i> Future Enquiry
                     </button>
                   </div>
@@ -1437,22 +1573,50 @@
         </div>
       </div>
 
-      <!-- ==================== GROUND FLOOR ==================== -->
+      <!-- ==================== GROUND FLOOR & PARKING RULES ==================== -->
       <div class="ground-floor-block">
-        <h4 style="font-size: 1.25rem; color: var(--primary);">
-          <i class="fa-solid fa-car-side"></i> Ground Floor &amp; Stilt Parking
-        </h4>
-        <p style="font-size: 0.9rem; color: var(--slate-600); max-width: 650px; margin: 4px auto 0 auto;">
-          The ground floor is dedicated to covered vehicle parking for all 16 flats, main security gate, and high-speed elevator lobby.
-        </p>
-        <div class="ground-grid">
-          <div class="ground-item">
-            <i class="fa-solid fa-square-parking"></i>
-            <div>
-              <strong>Covered Stilt Parking</strong>
-              <span>Dedicated car &amp; 2-wheeler spots</span>
-            </div>
+        <div class="ground-header">
+          <h4><i class="fa-solid fa-car-side"></i> Ground Floor Stilt Parking &amp; Amenities</h4>
+          <p>
+            The entire ground level is dedicated to covered, demarcated vehicle parking, high-speed passenger elevator lobby, 24/7 security cabin, and water storage systems.
+          </p>
+        </div>
+
+        <!-- Official Parking Policy Card -->
+        <div class="parking-allocation-card">
+          <div class="parking-allocation-title">
+            <i class="fa-solid fa-square-parking" style="color: var(--accent-gold);"></i> Official Parking Allocation Policy
           </div>
+          <div class="parking-allocation-grid">
+            
+            <div class="parking-rule-box">
+              <div class="parking-rule-icon">
+                <i class="fa-solid fa-car"></i>
+              </div>
+              <div class="parking-rule-text">
+                <strong>1st Floor &amp; 2nd Floor (Flats 101–104, 201–204)</strong>
+                <span style="color: var(--emerald-dark);">
+                  <i class="fa-solid fa-check-circle"></i> 1 Covered Car Parking + 2 Bike Parking
+                </span>
+              </div>
+            </div>
+
+            <div class="parking-rule-box">
+              <div class="parking-rule-icon bikes-only">
+                <i class="fa-solid fa-motorcycle"></i>
+              </div>
+              <div class="parking-rule-text">
+                <strong>3rd Floor &amp; 4th Floor (Flats 301–304, 401–404)</strong>
+                <span style="color: #854d0e;">
+                  <i class="fa-solid fa-check-circle"></i> 2 Bike Parking (Dedicated)
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="ground-grid">
           <div class="ground-item">
             <i class="fa-solid fa-elevator"></i>
             <div>
@@ -1464,14 +1628,21 @@
             <i class="fa-solid fa-shield-halved"></i>
             <div>
               <strong>Security Gate &amp; CCTV</strong>
-              <span>24/7 camera monitoring</span>
+              <span>24/7 boundary monitoring</span>
             </div>
           </div>
           <div class="ground-item">
             <i class="fa-solid fa-faucet-drip"></i>
             <div>
-              <strong>24-Hour Water Supply</strong>
-              <span>Borewell + municipal supply</span>
+              <strong>24-Hour Water Facility</strong>
+              <span>Deep borewell + municipal overhead</span>
+            </div>
+          </div>
+          <div class="ground-item">
+            <i class="fa-solid fa-bolt"></i>
+            <div>
+              <strong>24/7 DG Generator Backup</strong>
+              <span>Uninterrupted lift &amp; common power</span>
             </div>
           </div>
         </div>
@@ -1481,10 +1652,10 @@
       <div class="amenities-strip">
         <h3>Building Amenities &amp; Infrastructure</h3>
         <div class="amenities-grid">
+          <div class="amenity-chip"><i class="fa-solid fa-compass"></i> All 100% East Facing</div>
           <div class="amenity-chip"><i class="fa-solid fa-bolt"></i> 24/7 DG Generator Backup</div>
           <div class="amenity-chip"><i class="fa-solid fa-elevator"></i> Passenger Elevator</div>
           <div class="amenity-chip"><i class="fa-solid fa-shield-halved"></i> CCTV Surveillance</div>
-          <div class="amenity-chip"><i class="fa-solid fa-compass"></i> 100% Vastu Compliant</div>
           <div class="amenity-chip"><i class="fa-solid fa-square-parking"></i> Covered Vehicle Parking</div>
           <div class="amenity-chip"><i class="fa-solid fa-faucet-drip"></i> Continuous 24-Hr Water</div>
           <div class="amenity-chip"><i class="fa-solid fa-wifi"></i> High-Speed Internet Ready</div>
@@ -1502,7 +1673,7 @@
     <div class="container">
       <div class="footer-content">
         <h4>Ganesh Towers</h4>
-        <p>16 Residential Apartments • 4 Floors • Anaparthi, East Godavari, Andhra Pradesh</p>
+        <p>16 East-Facing Apartments • 4 Floors • Anaparthi, East Godavari, Andhra Pradesh</p>
         <div class="footer-links-wrap">
           <a href="tel:+919876543210" class="btn btn-sm btn-primary phone-btn">
             <i class="fa-solid fa-phone"></i> Direct Call
@@ -1566,7 +1737,6 @@
      * Filter by Floor
      */
     function filterFloor(floorId, btn) {
-      // Toggle button active
       btn.parentElement.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
 
