@@ -34,6 +34,7 @@ Modern, floor-wise directory website for **Ganesh Towers**, located in **Anapart
 - **Phone**: [+91 85228 17555](tel:+918522817555)
 - **WhatsApp**: [8522817555](https://wa.me/918522817555)
 - **Address**: Ganesh Towers, Anaparthi, East Godavari District, Andhra Pradesh - 533342
+- **Google Maps Location**: [https://maps.app.goo.gl/J1q3918Prq9iZRzu9](https://maps.app.goo.gl/J1q3918Prq9iZRzu9)
 
 ---
 

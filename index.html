@@ -884,6 +884,17 @@
     }
 
     @media (max-width: 640px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .header-actions {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
       .flats-pair-grid {
         grid-template-columns: 1fr;
       }
@@ -925,6 +936,9 @@
         <a href="https://wa.me/918522817555?text=Hello%20Ganesh%20Towers%2C%20I%20would%20like%20to%20enquire%20about%20flat%20availability." target="_blank" rel="noopener" class="btn btn-sm btn-whatsapp wa-btn">
           <i class="fa-brands fa-whatsapp"></i> WhatsApp
         </a>
+        <a href="https://maps.app.goo.gl/J1q3918Prq9iZRzu9" target="_blank" rel="noopener" class="btn btn-sm" style="background: rgba(255,255,255,0.12); color: #fff; border: 1px solid rgba(255,255,255,0.25);" title="Open location on Google Maps">
+          <i class="fa-solid fa-location-dot" style="color: #f87171;"></i> Maps
+        </a>
       </div>
     </div>
   </header>
@@ -938,9 +952,9 @@
         
         <div class="hero-photo-wrapper">
           <img src="images/ganesh-towers-elevation.jpg" alt="Ganesh Towers Building Photo">
-          <div class="hero-photo-badge">
-            <i class="fa-solid fa-camera"></i> Actual Elevation • Ganesh Towers
-          </div>
+          <a href="https://maps.app.goo.gl/J1q3918Prq9iZRzu9" target="_blank" rel="noopener" class="hero-photo-badge" style="text-decoration: none;" title="Open in Google Maps">
+            <i class="fa-solid fa-map-location-dot" style="color: var(--accent-gold);"></i> Actual Elevation • Google Maps &rarr;
+          </a>
         </div>
 
         <div class="hero-details">
@@ -972,6 +986,9 @@
             </a>
             <a href="https://wa.me/918522817555?text=Hello%20Ganesh%20Towers%2C%20I%20would%20like%20to%20enquire%20about%20flat%20availability." target="_blank" rel="noopener" class="btn btn-whatsapp wa-btn">
               <i class="fa-brands fa-whatsapp"></i> WhatsApp: 8522817555
+            </a>
+            <a href="https://maps.app.goo.gl/J1q3918Prq9iZRzu9" target="_blank" rel="noopener" class="btn btn-sm" style="background: #ffffff; color: var(--primary); border: 1.5px solid var(--slate-300); font-weight: 700; display: inline-flex; align-items: center; gap: 8px;">
+              <i class="fa-solid fa-map-location-dot" style="color: #ea4335;"></i> Google Maps Location
             </a>
           </div>
         </div>
@@ -1710,7 +1727,9 @@
           <div class="amenity-chip"><i class="fa-solid fa-square-parking"></i> Covered Stilt Parking</div>
           <div class="amenity-chip"><i class="fa-solid fa-faucet-drip"></i> 24-Hr Continuous Water</div>
           <div class="amenity-chip"><i class="fa-solid fa-cloud-sun"></i> Open Rooftop Terrace</div>
-          <div class="amenity-chip"><i class="fa-solid fa-location-dot"></i> Prime Anaparthi Location</div>
+          <a href="https://maps.app.goo.gl/J1q3918Prq9iZRzu9" target="_blank" rel="noopener" class="amenity-chip" style="text-decoration: none; color: inherit; cursor: pointer;">
+            <i class="fa-solid fa-location-dot" style="color: #ef4444;"></i> Prime Anaparthi Location (Maps)
+          </a>
         </div>
       </div>
 
@@ -1727,11 +1746,13 @@
           <img src="images/ganesh-idol.png" alt="Lord Ganesh Idol" style="width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--accent-gold); object-fit: contain; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.3);">
           <h4 style="margin: 0; font-size: 1.5rem; color: #fff;">Ganesh Towers</h4>
         </div>
-        <p>16 East-Facing 2 BHK Apartments • 4 Floors • Anaparthi, East Godavari, Andhra Pradesh</p>
+        <p>16 East-Facing 2 BHK Apartments • 4 Floors • <a href="https://maps.app.goo.gl/J1q3918Prq9iZRzu9" target="_blank" rel="noopener" style="color: #cbd5e1; text-decoration: underline;" title="View on Google Maps">Anaparthi, East Godavari, Andhra Pradesh</a></p>
         <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 16px;">
           <i class="fa-solid fa-phone" style="color: var(--accent-gold);"></i> Call: <a href="tel:+918522817555" style="color: #fff; font-weight: 700;">+91 85228 17555</a>
           &nbsp;|&nbsp;
           <i class="fa-brands fa-whatsapp" style="color: #25d366;"></i> WhatsApp: <a href="https://wa.me/918522817555" target="_blank" rel="noopener" style="color: #fff; font-weight: 700;">8522817555</a>
+          &nbsp;|&nbsp;
+          <i class="fa-solid fa-location-dot" style="color: #ef4444;"></i> <a href="https://maps.app.goo.gl/J1q3918Prq9iZRzu9" target="_blank" rel="noopener" style="color: #fff; font-weight: 700;">Google Maps</a>
         </p>
         <div class="footer-links-wrap">
           <a href="tel:+918522817555" class="btn btn-sm btn-primary phone-btn">
@@ -1740,8 +1761,8 @@
           <a href="https://wa.me/918522817555?text=Hello%20Ganesh%20Towers%2C%20I%20want%20to%20visit%20the%20property." target="_blank" rel="noopener" class="btn btn-sm btn-whatsapp wa-btn">
             <i class="fa-brands fa-whatsapp"></i> WhatsApp: 8522817555
           </a>
-          <a href="https://maps.google.com/?q=Anaparthi+Andhra+Pradesh" target="_blank" rel="noopener" class="btn btn-sm btn-gold">
-            <i class="fa-solid fa-map-location-dot"></i> Google Maps
+          <a href="https://maps.app.goo.gl/J1q3918Prq9iZRzu9" target="_blank" rel="noopener" class="btn btn-sm btn-gold">
+            <i class="fa-solid fa-map-location-dot"></i> View on Google Maps
           </a>
         </div>
       </div>
