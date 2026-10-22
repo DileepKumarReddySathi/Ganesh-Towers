@@ -1,5 +1,7 @@
 # Ganesh Towers - Official Website
 
+![Website Opens](https://api.visitorbadge.io/api/visitors?path=dileepkumarreddysathi.github.io.ganesh-towers&label=Website%20Opens&countColor=%23c69222)
+
 Modern, floor-wise directory website for **Ganesh Towers**, located in **Anaparthi, Andhra Pradesh**. Showcases all 16 100% East-Facing 2 BHK apartments floor-wise (2 front view + 2 back view flats per floor) with real-time flat status, parking allocation, and direct WhatsApp enquiry booking.
 
 ---

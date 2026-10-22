@@ -844,6 +844,65 @@
       margin-bottom: 24px;
     }
 
+    /* WEBSITE OPEN COUNTER WIDGET */
+    .website-counter-container {
+      margin: 10px auto 20px auto;
+      display: inline-block;
+    }
+
+    .website-counter-box {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(198, 146, 34, 0.35);
+      border-radius: 12px;
+      padding: 12px 22px;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    }
+
+    .counter-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.3px;
+    }
+
+    .counter-badge-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 28px;
+    }
+
+    .open-counter-badge {
+      height: 28px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .counter-subtext {
+      font-size: 0.78rem;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .counter-summary-badge {
+      background: #fef8eb !important;
+      border-color: #fde68a !important;
+      color: #92400e !important;
+      font-weight: 700;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
     /* FLOATING WHATSAPP BUTTON */
     .floating-wa-btn {
       position: fixed;
@@ -977,6 +1036,11 @@
             <div class="summary-badge"><i class="fa-solid fa-motorcycle"></i> 3rd &amp; 4th Floor: 2 Bike Parking</div>
             <div class="summary-badge"><i class="fa-solid fa-door-closed"></i> Flats 104, 204, 304, 404 Fully Closed (No Balcony)</div>
             <div class="summary-badge"><i class="fa-solid fa-elevator"></i> Passenger Elevator (Lift)</div>
+            <div class="summary-badge counter-summary-badge">
+              <i class="fa-solid fa-chart-line" style="color: var(--accent-gold);"></i>
+              <span>Live Website Opens:</span>
+              <img src="https://api.visitorbadge.io/api/visitors?path=dileepkumarreddysathi.github.io.ganesh-towers&label=Opens&countColor=%23c69222" alt="Website Opens" style="height: 19px; vertical-align: middle; border-radius: 3px;">
+            </div>
           </div>
 
           <div style="display: flex; gap: 12px; flex-wrap: wrap; align-items: center;">
@@ -1765,6 +1829,25 @@
             <i class="fa-solid fa-map-location-dot"></i> View on Google Maps
           </a>
         </div>
+
+        <!-- WEBSITE OPEN COUNTER -->
+        <div class="website-counter-container">
+          <div class="website-counter-box">
+            <div class="counter-label">
+              <i class="fa-solid fa-chart-line" style="color: var(--accent-gold);"></i>
+              <span>Total Website Open Count</span>
+            </div>
+            <div class="counter-badge-wrap">
+              <img src="https://api.visitorbadge.io/api/visitors?path=dileepkumarreddysathi.github.io.ganesh-towers&label=Total%20Opens&countColor=%23c69222" 
+                   alt="Ganesh Towers Website Open Count" 
+                   title="Official live website visitor counter"
+                   class="open-counter-badge">
+            </div>
+            <div class="counter-subtext" id="deviceVisitNote">
+              <i class="fa-solid fa-eye" style="color: #38bdf8;"></i> Your opens on this device: <strong id="deviceVisitCount" style="color: #fff;">1</strong>
+            </div>
+          </div>
+        </div>
       </div>
       <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 20px; font-size: 0.82rem; color: #64748b;">
         © 2026 Ganesh Towers. All rights reserved.
@@ -1871,6 +1954,23 @@
         backWings.forEach(w => w.style.display = 'block');
       }
     }
+
+    /**
+     * WEBSITE OPEN COUNTER (DEVICE TRACKER)
+     */
+    (function trackWebsiteOpens() {
+      try {
+        const STORAGE_KEY = 'ganesh_towers_open_count';
+        let currentCount = parseInt(localStorage.getItem(STORAGE_KEY) || '0', 10) + 1;
+        localStorage.setItem(STORAGE_KEY, currentCount.toString());
+        const deviceCounterEl = document.getElementById('deviceVisitCount');
+        if (deviceCounterEl) {
+          deviceCounterEl.textContent = currentCount;
+        }
+      } catch (e) {
+        console.log('Local visitor count not accessible:', e);
+      }
+    })();
   </script>
 </body>
 </html>
