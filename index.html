@@ -558,6 +558,12 @@
       border: 1px solid #fde68a;
     }
 
+    .status-badge.sold {
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+
     .closed-pill {
       display: inline-flex;
       align-items: center;
@@ -941,7 +947,7 @@
             <div class="summary-badge"><i class="fa-solid fa-car"></i> 1st &amp; 2nd Floor: 1 Car + 2 Bike Parking</div>
             <div class="summary-badge"><i class="fa-solid fa-motorcycle"></i> 3rd &amp; 4th Floor: 2 Bike Parking</div>
             <div class="summary-badge"><i class="fa-solid fa-door-closed"></i> Flats 104, 204, 304, 404 Fully Closed (No Balcony)</div>
-            <div class="summary-badge"><i class="fa-solid fa-elevator"></i> Passenger Lift with ARD &amp; Generator</div>
+            <div class="summary-badge"><i class="fa-solid fa-elevator"></i> Passenger Elevator (Lift)</div>
           </div>
 
           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
@@ -974,8 +980,9 @@
 
       <!-- Filter by View / Status -->
       <div class="filter-group">
-        <span class="filter-label">Filter View:</span>
-        <button class="filter-pill active" onclick="filterView('all', this)">All Views (16)</button>
+        <span class="filter-label">Filter:</span>
+        <button class="filter-pill active" onclick="filterView('all', this)">All (16)</button>
+        <button class="filter-pill" style="color: var(--emerald-dark); font-weight: 700;" onclick="filterView('available', this)">⭐ Available (3)</button>
         <button class="filter-pill" onclick="filterView('front', this)">🌅 Front View (8)</button>
         <button class="filter-pill" onclick="filterView('back', this)">🌄 Back View (8)</button>
       </div>
@@ -1015,7 +1022,7 @@
               </div>
               <div class="flats-pair-grid">
                 
-                <!-- FLAT 401 -->
+                <!-- FLAT 401 (FOR RENT: ₹4,000/mo) -->
                 <div class="flat-card" data-wing="front" data-status="rent">
                   <div>
                     <div class="flat-top-row">
@@ -1025,6 +1032,7 @@
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-indian-rupee-sign" style="color: var(--emerald);"></i> <strong>Rent:</strong> ₹4,000 / month</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Left)</li>
                       <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Road View Balcony</li>
                       <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
@@ -1032,25 +1040,26 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Rent / Month</span>
-                      <strong style="color: var(--emerald);">Enquire for Rent</strong>
+                      <span>Monthly Rent</span>
+                      <strong style="color: var(--emerald); font-size: 1.05rem;">₹4,000 / mo</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 401', '4th Floor', 'Front View 3 BHK (East Facing with Road Balcony & 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 401
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 401', '4th Floor', 'Front View 3 BHK For Rent (Rent: ₹4,000/month with Road Balcony & 2 Bike Parking)')">
+                      <i class="fa-brands fa-whatsapp"></i> Rent Flat 401 (₹4k)
                     </button>
                   </div>
                 </div>
 
-                <!-- FLAT 402 -->
-                <div class="flat-card" data-wing="front" data-status="sale">
+                <!-- FLAT 402 (OCCUPIED) -->
+                <div class="flat-card" data-wing="front" data-status="occupied">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 402</div>
-                      <span class="status-badge sale">For Sale</span>
+                      <span class="status-badge occupied">Occupied</span>
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-circle-check" style="color: var(--slate-600);"></i> <strong>Status:</strong> Currently Occupied</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Right)</li>
                       <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Road View Balcony</li>
                       <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
@@ -1058,11 +1067,11 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Ownership</span>
-                      <strong style="color: var(--accent-gold);">Price on Request</strong>
+                      <span>Occupancy</span>
+                      <strong style="color: var(--slate-600);">Occupied</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 402', '4th Floor', 'Front View 3 BHK (East Facing with Road Balcony & 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 402
+                    <button class="btn btn-sm" style="background: #f1f5f9; color: #475569; cursor: not-allowed; border: 1px solid #cbd5e1;">
+                      <i class="fa-solid fa-circle-check"></i> Occupied
                     </button>
                   </div>
                 </div>
@@ -1078,16 +1087,17 @@
               </div>
               <div class="flats-pair-grid">
                 
-                <!-- FLAT 403 -->
-                <div class="flat-card" data-wing="back" data-status="rent">
+                <!-- FLAT 403 (OCCUPIED) -->
+                <div class="flat-card" data-wing="back" data-status="occupied">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 403</div>
-                      <span class="status-badge rent">For Rent</span>
+                      <span class="status-badge occupied">Occupied</span>
                     </div>
                     <h4 class="flat-type-title">2 BHK Comfort Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-circle-check" style="color: var(--slate-600);"></i> <strong>Status:</strong> Currently Occupied</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Left)</li>
                       <li><i class="fa-solid fa-wind"></i> <strong>Balcony:</strong> Utility Balcony</li>
                       <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
@@ -1095,26 +1105,27 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Rent / Month</span>
-                      <strong style="color: var(--emerald);">Enquire for Rent</strong>
+                      <span>Occupancy</span>
+                      <strong style="color: var(--slate-600);">Occupied</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 403', '4th Floor', 'Back View 2 BHK (East Facing with Utility Balcony & 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 403
+                    <button class="btn btn-sm" style="background: #f1f5f9; color: #475569; cursor: not-allowed; border: 1px solid #cbd5e1;">
+                      <i class="fa-solid fa-circle-check"></i> Occupied
                     </button>
                   </div>
                 </div>
 
-                <!-- FLAT 404 (FULLY CLOSED - NO BALCONY) -->
-                <div class="flat-card fully-closed" data-wing="back" data-status="available">
+                <!-- FLAT 404 (FULLY CLOSED - FOR RENT: ₹3,500/mo) -->
+                <div class="flat-card fully-closed" data-wing="back" data-status="rent">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 404</div>
-                      <span class="status-badge available">Rent / Sale</span>
+                      <span class="status-badge rent">For Rent</span>
                     </div>
                     <div class="closed-pill"><i class="fa-solid fa-door-closed"></i> Fully Closed Flat • No Balcony</div>
                     <h4 class="flat-type-title">2 BHK Fully Closed Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-indian-rupee-sign" style="color: var(--emerald);"></i> <strong>Rent:</strong> ₹3,500 / month</li>
                       <li><i class="fa-solid fa-expand"></i> <strong>Layout:</strong> Without Balcony (Max Room Space)</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Right)</li>
                       <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
@@ -1122,11 +1133,11 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Availability</span>
-                      <strong>Ready to Move</strong>
+                      <span>Monthly Rent</span>
+                      <strong style="color: var(--emerald); font-size: 1.05rem;">₹3,500 / mo</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 404', '4th Floor', 'Back View 2 BHK (East Facing Fully Closed Without Balcony & 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 404
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 404', '4th Floor', 'Back View 2 BHK For Rent (Rent: ₹3,500/month Fully Closed Without Balcony & 2 Bike Parking)')">
+                      <i class="fa-brands fa-whatsapp"></i> Rent Flat 404 (₹3.5k)
                     </button>
                   </div>
                 </div>
@@ -1164,16 +1175,17 @@
               </div>
               <div class="flats-pair-grid">
                 
-                <!-- FLAT 301 -->
-                <div class="flat-card" data-wing="front" data-status="rent">
+                <!-- FLAT 301 (SOLD OUT) -->
+                <div class="flat-card" data-wing="front" data-status="sold">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 301</div>
-                      <span class="status-badge rent">For Rent</span>
+                      <span class="status-badge sold">Sold Out</span>
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-circle-xmark" style="color: #991b1b;"></i> <strong>Status:</strong> Sold Out</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Left)</li>
                       <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Open Road Balcony</li>
                       <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
@@ -1181,25 +1193,26 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Rent / Month</span>
-                      <strong style="color: var(--emerald);">Enquire for Rent</strong>
+                      <span>Status</span>
+                      <strong style="color: #991b1b;">Sold Out</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 301', '3rd Floor', 'Front View 3 BHK (East Facing with Road Balcony & 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 301
+                    <button class="btn btn-sm" style="background: #e2e8f0; color: #64748b; cursor: not-allowed; border: 1px solid #cbd5e1;">
+                      <i class="fa-solid fa-circle-xmark"></i> Sold Out
                     </button>
                   </div>
                 </div>
 
-                <!-- FLAT 302 -->
-                <div class="flat-card" data-wing="front" data-status="sale">
+                <!-- FLAT 302 (SOLD OUT) -->
+                <div class="flat-card" data-wing="front" data-status="sold">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 302</div>
-                      <span class="status-badge sale">For Sale</span>
+                      <span class="status-badge sold">Sold Out</span>
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-circle-xmark" style="color: #991b1b;"></i> <strong>Status:</strong> Sold Out</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Right)</li>
                       <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Open Road Balcony</li>
                       <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
@@ -1207,11 +1220,11 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Ownership</span>
-                      <strong style="color: var(--accent-gold);">Price on Request</strong>
+                      <span>Status</span>
+                      <strong style="color: #991b1b;">Sold Out</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 302', '3rd Floor', 'Front View 3 BHK (East Facing with Road Balcony & 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 302
+                    <button class="btn btn-sm" style="background: #e2e8f0; color: #64748b; cursor: not-allowed; border: 1px solid #cbd5e1;">
+                      <i class="fa-solid fa-circle-xmark"></i> Sold Out
                     </button>
                   </div>
                 </div>
@@ -1227,16 +1240,17 @@
               </div>
               <div class="flats-pair-grid">
                 
-                <!-- FLAT 303 -->
-                <div class="flat-card" data-wing="back" data-status="rent">
+                <!-- FLAT 303 (OCCUPIED) -->
+                <div class="flat-card" data-wing="back" data-status="occupied">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 303</div>
-                      <span class="status-badge rent">For Rent</span>
+                      <span class="status-badge occupied">Occupied</span>
                     </div>
                     <h4 class="flat-type-title">2 BHK Comfort Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-circle-check" style="color: var(--slate-600);"></i> <strong>Status:</strong> Currently Occupied</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Left)</li>
                       <li><i class="fa-solid fa-wind"></i> <strong>Balcony:</strong> Utility Balcony</li>
                       <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
@@ -1244,26 +1258,27 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Rent / Month</span>
-                      <strong style="color: var(--emerald);">Enquire for Rent</strong>
+                      <span>Occupancy</span>
+                      <strong style="color: var(--slate-600);">Occupied</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 303', '3rd Floor', 'Back View 2 BHK (East Facing with Utility Balcony & 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 303
+                    <button class="btn btn-sm" style="background: #f1f5f9; color: #475569; cursor: not-allowed; border: 1px solid #cbd5e1;">
+                      <i class="fa-solid fa-circle-check"></i> Occupied
                     </button>
                   </div>
                 </div>
 
-                <!-- FLAT 304 (FULLY CLOSED - NO BALCONY) -->
-                <div class="flat-card fully-closed" data-wing="back" data-status="rent">
+                <!-- FLAT 304 (FULLY CLOSED - OCCUPIED) -->
+                <div class="flat-card fully-closed" data-wing="back" data-status="occupied">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 304</div>
-                      <span class="status-badge rent">For Rent</span>
+                      <span class="status-badge occupied">Occupied</span>
                     </div>
                     <div class="closed-pill"><i class="fa-solid fa-door-closed"></i> Fully Closed Flat • No Balcony</div>
                     <h4 class="flat-type-title">2 BHK Fully Closed Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-circle-check" style="color: var(--slate-600);"></i> <strong>Status:</strong> Currently Occupied</li>
                       <li><i class="fa-solid fa-expand"></i> <strong>Layout:</strong> Without Balcony (Max Room Space)</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Right)</li>
                       <li class="parking-row"><i class="fa-solid fa-motorcycle"></i> <strong>Parking:</strong> 2 Bike Parking</li>
@@ -1271,12 +1286,14 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Rent / Month</span>
-                      <strong style="color: var(--emerald);">Enquire for Rent</strong>
+                      <span>Occupancy</span>
+                      <strong style="color: var(--slate-600);">Occupied</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 304', '3rd Floor', 'Back View 2 BHK (East Facing Fully Closed Without Balcony & 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 304
+                    <button class="btn btn-sm" style="background: #f1f5f9; color: #475569; cursor: not-allowed; border: 1px solid #cbd5e1;">
+                      <i class="fa-solid fa-circle-check"></i> Occupied
                     </button>
+                  </div>
+                </div>
                   </div>
                 </div>
 
@@ -1313,16 +1330,17 @@
               </div>
               <div class="flats-pair-grid">
                 
-                <!-- FLAT 201 -->
-                <div class="flat-card" data-wing="front" data-status="rent">
+                <!-- FLAT 201 (SOLD OUT) -->
+                <div class="flat-card" data-wing="front" data-status="sold">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 201</div>
-                      <span class="status-badge rent">For Rent</span>
+                      <span class="status-badge sold">Sold Out</span>
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-circle-xmark" style="color: #991b1b;"></i> <strong>Status:</strong> Sold Out</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Left)</li>
                       <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Road View Balcony</li>
                       <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
@@ -1330,25 +1348,26 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Rent / Month</span>
-                      <strong style="color: var(--emerald);">Enquire for Rent</strong>
+                      <span>Status</span>
+                      <strong style="color: #991b1b;">Sold Out</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 201', '2nd Floor', 'Front View 3 BHK (East Facing with 1 Car + 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 201
+                    <button class="btn btn-sm" style="background: #e2e8f0; color: #64748b; cursor: not-allowed; border: 1px solid #cbd5e1;">
+                      <i class="fa-solid fa-circle-xmark"></i> Sold Out
                     </button>
                   </div>
                 </div>
 
-                <!-- FLAT 202 -->
-                <div class="flat-card" data-wing="front" data-status="sale">
+                <!-- FLAT 202 (SOLD OUT) -->
+                <div class="flat-card" data-wing="front" data-status="sold">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 202</div>
-                      <span class="status-badge sale">For Sale</span>
+                      <span class="status-badge sold">Sold Out</span>
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-circle-xmark" style="color: #991b1b;"></i> <strong>Status:</strong> Sold Out</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Right)</li>
                       <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Road View Balcony</li>
                       <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
@@ -1356,11 +1375,11 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Ownership</span>
-                      <strong style="color: var(--accent-gold);">Price on Request</strong>
+                      <span>Status</span>
+                      <strong style="color: #991b1b;">Sold Out</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 202', '2nd Floor', 'Front View 3 BHK (East Facing with 1 Car + 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 202
+                    <button class="btn btn-sm" style="background: #e2e8f0; color: #64748b; cursor: not-allowed; border: 1px solid #cbd5e1;">
+                      <i class="fa-solid fa-circle-xmark"></i> Sold Out
                     </button>
                   </div>
                 </div>
@@ -1403,17 +1422,18 @@
                   </div>
                 </div>
 
-                <!-- FLAT 204 (FULLY CLOSED - NO BALCONY) -->
-                <div class="flat-card fully-closed" data-wing="back" data-status="rent">
+                <!-- FLAT 204 (FULLY CLOSED - SOLD OUT) -->
+                <div class="flat-card fully-closed" data-wing="back" data-status="sold">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 204</div>
-                      <span class="status-badge rent">For Rent</span>
+                      <span class="status-badge sold">Sold Out</span>
                     </div>
                     <div class="closed-pill"><i class="fa-solid fa-door-closed"></i> Fully Closed Flat • No Balcony</div>
                     <h4 class="flat-type-title">2 BHK Fully Closed Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-circle-xmark" style="color: #991b1b;"></i> <strong>Status:</strong> Sold Out</li>
                       <li><i class="fa-solid fa-expand"></i> <strong>Layout:</strong> Without Balcony (Max Room Space)</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Right)</li>
                       <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
@@ -1421,11 +1441,11 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Rent / Month</span>
-                      <strong style="color: var(--emerald);">Enquire for Rent</strong>
+                      <span>Status</span>
+                      <strong style="color: #991b1b;">Sold Out</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 204', '2nd Floor', 'Back View 2 BHK (East Facing Fully Closed Without Balcony & 1 Car + 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 204
+                    <button class="btn btn-sm" style="background: #e2e8f0; color: #64748b; cursor: not-allowed; border: 1px solid #cbd5e1;">
+                      <i class="fa-solid fa-circle-xmark"></i> Sold Out
                     </button>
                   </div>
                 </div>
@@ -1490,16 +1510,17 @@
                   </div>
                 </div>
 
-                <!-- FLAT 102 -->
-                <div class="flat-card" data-wing="front" data-status="sale">
+                <!-- FLAT 102 (SOLD OUT) -->
+                <div class="flat-card" data-wing="front" data-status="sold">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 102</div>
-                      <span class="status-badge sale">For Sale</span>
+                      <span class="status-badge sold">Sold Out</span>
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-circle-xmark" style="color: #991b1b;"></i> <strong>Status:</strong> Sold Out</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Right)</li>
                       <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Direct Road Balcony</li>
                       <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
@@ -1507,11 +1528,11 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Ownership</span>
-                      <strong style="color: var(--accent-gold);">Price on Request</strong>
+                      <span>Status</span>
+                      <strong style="color: #991b1b;">Sold Out</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 102', '1st Floor', 'Front View 3 BHK (East Facing with 1 Car + 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 102
+                    <button class="btn btn-sm" style="background: #e2e8f0; color: #64748b; cursor: not-allowed; border: 1px solid #cbd5e1;">
+                      <i class="fa-solid fa-circle-xmark"></i> Sold Out
                     </button>
                   </div>
                 </div>
@@ -1554,17 +1575,18 @@
                   </div>
                 </div>
 
-                <!-- FLAT 104 (FULLY CLOSED - NO BALCONY) -->
-                <div class="flat-card fully-closed" data-wing="back" data-status="occupied">
+                <!-- FLAT 104 (FULLY CLOSED - SOLD OUT) -->
+                <div class="flat-card fully-closed" data-wing="back" data-status="sold">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 104</div>
-                      <span class="status-badge occupied">Occupied</span>
+                      <span class="status-badge sold">Sold Out</span>
                     </div>
                     <div class="closed-pill"><i class="fa-solid fa-door-closed"></i> Fully Closed Flat • No Balcony</div>
                     <h4 class="flat-type-title">2 BHK Fully Closed Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-circle-xmark" style="color: #991b1b;"></i> <strong>Status:</strong> Sold Out</li>
                       <li><i class="fa-solid fa-expand"></i> <strong>Layout:</strong> Without Balcony (Max Room Space)</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Right)</li>
                       <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
@@ -1573,10 +1595,10 @@
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
                       <span>Status</span>
-                      <strong style="color: var(--slate-600);">Currently Rented</strong>
+                      <strong style="color: #991b1b;">Sold Out</strong>
                     </div>
-                    <button class="btn btn-sm btn-primary" onclick="enquireFlat('Flat 104', '1st Floor', 'Back View 2 BHK (East Facing Fully Closed Without Balcony & 1 Car + 2 Bike Parking)')">
-                      <i class="fa-solid fa-clock"></i> Future Enquiry
+                    <button class="btn btn-sm" style="background: #e2e8f0; color: #64748b; cursor: not-allowed; border: 1px solid #cbd5e1;">
+                      <i class="fa-solid fa-circle-xmark"></i> Sold Out
                     </button>
                   </div>
                 </div>
@@ -1635,15 +1657,15 @@
           <div class="ground-item">
             <i class="fa-solid fa-elevator"></i>
             <div>
-              <strong>High-Speed Passenger Lift</strong>
-              <span>Automatic with battery ARD backup</span>
+              <strong>Passenger Elevator (Lift)</strong>
+              <span>Smooth automatic floor access</span>
             </div>
           </div>
           <div class="ground-item">
-            <i class="fa-solid fa-shield-halved"></i>
+            <i class="fa-solid fa-door-open"></i>
             <div>
-              <strong>Security Gate &amp; CCTV</strong>
-              <span>24/7 boundary monitoring</span>
+              <strong>Main Entrance Gate</strong>
+              <span>Gated residential compound</span>
             </div>
           </div>
           <div class="ground-item">
@@ -1654,10 +1676,10 @@
             </div>
           </div>
           <div class="ground-item">
-            <i class="fa-solid fa-bolt"></i>
+            <i class="fa-solid fa-cloud-sun"></i>
             <div>
-              <strong>24/7 DG Generator Backup</strong>
-              <span>Uninterrupted lift &amp; common power</span>
+              <strong>Open Rooftop Terrace</strong>
+              <span>Spacious open-air sit-out</span>
             </div>
           </div>
         </div>
@@ -1665,16 +1687,14 @@
 
       <!-- ==================== ESSENTIAL AMENITIES STRIP ==================== -->
       <div class="amenities-strip">
-        <h3>Building Amenities &amp; Infrastructure</h3>
+        <h3>Building Amenities &amp; Features</h3>
         <div class="amenities-grid">
-          <div class="amenity-chip"><i class="fa-solid fa-compass"></i> All 100% East Facing</div>
-          <div class="amenity-chip"><i class="fa-solid fa-bolt"></i> 24/7 DG Generator Backup</div>
-          <div class="amenity-chip"><i class="fa-solid fa-elevator"></i> Passenger Elevator</div>
-          <div class="amenity-chip"><i class="fa-solid fa-shield-halved"></i> CCTV Surveillance</div>
-          <div class="amenity-chip"><i class="fa-solid fa-square-parking"></i> Covered Vehicle Parking</div>
-          <div class="amenity-chip"><i class="fa-solid fa-faucet-drip"></i> Continuous 24-Hr Water</div>
-          <div class="amenity-chip"><i class="fa-solid fa-wifi"></i> High-Speed Internet Ready</div>
+          <div class="amenity-chip"><i class="fa-solid fa-compass"></i> All 16 Flats 100% East Facing</div>
+          <div class="amenity-chip"><i class="fa-solid fa-elevator"></i> Passenger Elevator (Lift)</div>
+          <div class="amenity-chip"><i class="fa-solid fa-square-parking"></i> Covered Stilt Parking</div>
+          <div class="amenity-chip"><i class="fa-solid fa-faucet-drip"></i> 24-Hr Continuous Water</div>
           <div class="amenity-chip"><i class="fa-solid fa-cloud-sun"></i> Open Rooftop Terrace</div>
+          <div class="amenity-chip"><i class="fa-solid fa-location-dot"></i> Prime Anaparthi Location</div>
         </div>
       </div>
 
@@ -1771,7 +1791,7 @@
     }
 
     /**
-     * Filter by Wing View (All / Front / Back)
+     * Filter by Wing View (All / Available / Front / Back)
      */
     function filterView(viewType, btn) {
       btn.parentElement.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
@@ -1779,14 +1799,29 @@
 
       const frontWings = document.querySelectorAll('.wing-front');
       const backWings = document.querySelectorAll('.wing-back');
+      const allCards = document.querySelectorAll('.flat-card');
 
       if (viewType === 'all') {
         frontWings.forEach(w => w.style.display = 'block');
         backWings.forEach(w => w.style.display = 'block');
+        allCards.forEach(c => c.style.display = 'flex');
+      } else if (viewType === 'available') {
+        frontWings.forEach(w => w.style.display = 'block');
+        backWings.forEach(w => w.style.display = 'block');
+        allCards.forEach(c => {
+          const status = c.getAttribute('data-status');
+          if (status === 'rent' || status === 'sale') {
+            c.style.display = 'flex';
+          } else {
+            c.style.display = 'none';
+          }
+        });
       } else if (viewType === 'front') {
+        allCards.forEach(c => c.style.display = 'flex');
         frontWings.forEach(w => w.style.display = 'block');
         backWings.forEach(w => w.style.display = 'none');
       } else if (viewType === 'back') {
+        allCards.forEach(c => c.style.display = 'flex');
         frontWings.forEach(w => w.style.display = 'none');
         backWings.forEach(w => w.style.display = 'block');
       }
