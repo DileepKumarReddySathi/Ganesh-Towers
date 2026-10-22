@@ -1,71 +1,54 @@
 # Ganesh Towers - Official Website
 
-Modern, responsive landing page for **Ganesh Towers**, located in **Anaparthi, Andhra Pradesh**. Showcases luxury 2 & 3 BHK flats available for rent and sale with interactive specifications, EMI calculator, image gallery, and direct WhatsApp enquiry booking.
+Modern, floor-wise directory website for **Ganesh Towers**, located in **Anaparthi, Andhra Pradesh**. Showcases all 16 100% East-Facing 2 BHK apartments floor-wise (2 front view + 2 back view flats per floor) with real-time flat status, parking allocation, and direct WhatsApp enquiry booking.
 
 ---
 
 ## 🌟 Key Features
 
-- **Modern Luxury Real Estate Design**: Sleek architectural design with glassmorphism header, responsive layout, and gold/navy theme.
-- **Flats Showcase (Rent & Sale)**: Interactive filterable tabs for Rent and Sale units (2 BHK & 3 BHK) with dimensions, floor plan specs modal, and WhatsApp integration.
-- **Interactive Home Loan EMI Calculator**: Sliders for property cost, interest rate, and tenure with real-time monthly EMI, principal, and total interest calculations.
-- **Direct WhatsApp Enquiry Flow**: One-click enquiry generation pre-filled with the customer's name, preferred flat type, and visit date.
-- **Amenities Grid**: 24/7 DG generator backup, automatic passenger lift, CCTV security, covered stilt car parking, 100% Vastu compliance, and rooftop sit-out.
-- **Lightbox Photo Gallery**: High-resolution gallery preview with fullscreen modal view.
-- **Strategic Location & Distance Matrix**: Highlights nearby connectivity in Anaparthi (Railway Station, Main Road, Schools, Hospitals) with embedded Google Map.
-- **FAQ Accordion**: Smooth collapsible accordion answering common tenant and buyer questions.
-- **Mobile Responsive & Floating Actions**: Floating WhatsApp action button and mobile sticky bottom action bar (Call / WhatsApp).
+- **Lord Ganesha Idol Emblem**: Auspicious golden Lord Ganesha emblem beside the building brand name.
+- **Floor-Wise 16 Flats Directory**:
+  - **4 Floors • All 2 BHK • 100% East Facing**:
+    - **Front View Wing (Road Facing with Balcony)**: 2 Flats per floor
+    - **Back View Wing (Quiet & Open)**: 2 Flats per floor
+  - **Flats 104, 204, 304, and 404**: Fully closed layouts without balconies for extra room carpet space.
+- **Dedicated Parking Allocation**:
+  - **1st & 2nd Floor Flats (101–104, 201–204)**: 1 Covered Car Parking + 2 Bike Parking
+  - **3rd & 4th Floor Flats (301–304, 401–404)**: 2 Bike Parking (Dedicated)
+- **Current Flat Availability & Pricing**:
+  - **Flat 401**: For Rent (₹4,000 / month)
+  - **Flat 404**: For Rent (₹3,500 / month - Fully Closed)
+  - **Flat 203**: For Sale (₹20,00,000 / 20 Lakhs)
+  - **Flat 101**: Owned by Owner (Owner Occupied)
+  - **Flat 103**: Reserved by Owner
+  - **Flats 102, 104, 201, 202, 204, 301, 302**: Sold Out
+  - **Flats 303, 304, 402, 403**: Occupied
+- **Direct 1-Click WhatsApp Booking**:
+  - Integrated with active phone & WhatsApp number: **+91 85228 17555** / **8522817555**.
+- **Real Building Photo**: Featured in the hero banner from the actual elevation.
 
 ---
 
-## ⚙️ How to Customize Your Contact Details
+## 📞 Contact Details
 
-Open [`index.html`](index.html) and locate the `SITE_CONFIG` object inside the `<script>` tag near the bottom (around line 950):
-
-```javascript
-const SITE_CONFIG = {
-  // Set your active WhatsApp number with Country Code (no +, spaces, or dashes)
-  // e.g. "919876543210" for India
-  whatsappNumber: "91XXXXXXXXXX",
-
-  // Phone number displayed to visitors
-  phoneDisplay: "+91 9XXXXXXXXX",
-  phoneDial: "+919876543210",
-
-  // Email address
-  email: "ganeshtowers.anaparthi@gmail.com",
-
-  // Address
-  address: "Ganesh Towers, Anaparthi, East Godavari, Andhra Pradesh - 533342"
-};
-```
+- **Phone**: [+91 85228 17555](tel:+918522817555)
+- **WhatsApp**: [8522817555](https://wa.me/918522817555)
+- **Address**: Ganesh Towers, Anaparthi, East Godavari District, Andhra Pradesh - 533342
 
 ---
 
 ## 🚀 How to Enable GitHub Pages (Free Hosting)
 
-1. Push the changes to your GitHub repository:
+1. Push your changes:
    ```bash
    git add .
-   git commit -m "Enhance Ganesh Towers website with modern real estate design"
+   git commit -m "Update Ganesh Towers website"
    git push origin main
    ```
 2. In your GitHub repository:
-   - Go to **Settings** > **Pages** (under Code and automation).
+   - Go to **Settings** > **Pages**.
    - Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
    - Select branch: `main` and folder: `/ (root)`.
    - Click **Save**.
-3. Within 1-2 minutes, your website will be live at:
+3. Live site URL:
    `https://dileepkumarreddysathi.github.io/Ganesh-Towers/`
-
----
-
-## 💻 Local Testing
-
-Simply double-click `index.html` to open it in any web browser, or run a local server:
-
-```powershell
-# Using Python
-python -m http.server 8000
-```
-Then visit `http://localhost:8000` in your browser.
