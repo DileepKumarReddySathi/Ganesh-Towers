@@ -13,7 +13,7 @@ Modern, floor-wise directory website for **Ganesh Towers**, located in **Anapart
     - **Back View Wing (Quiet & Open)**: 2 Flats per floor
   - **Flats 104, 204, 304, and 404**: Fully closed layouts without balconies for extra room carpet space.
 - **Dedicated Parking Allocation**:
-  - **1st & 2nd Floor Flats (101–104, 201–204)**: 1 Covered Car Parking + 2 Bike Parking
+  - **1st & 2nd Floor Flats (101–104, 201–204)**: 1 Covered Car Parking + 1 Bike Parking only
   - **3rd & 4th Floor Flats (301–304, 401–404)**: 2 Bike Parking (Dedicated)
 - **Current Flat Availability & Pricing**:
   - **Flat 401**: For Rent (₹4,000 / month)
