@@ -546,6 +546,18 @@
       border: 1px solid #bfdbfe;
     }
 
+    .status-badge.owner {
+      background: #e2e8f0;
+      color: #0f172a;
+      border: 1px solid #94a3b8;
+    }
+
+    .status-badge.reserved {
+      background: #fef3c7;
+      color: #92400e;
+      border: 1px solid #fde68a;
+    }
+
     .closed-pill {
       display: inline-flex;
       align-items: center;
@@ -1364,16 +1376,17 @@
               </div>
               <div class="flats-pair-grid">
                 
-                <!-- FLAT 203 -->
-                <div class="flat-card" data-wing="back" data-status="rent">
+                <!-- FLAT 203 (FOR SALE: ₹20,00,000) -->
+                <div class="flat-card" data-wing="back" data-status="sale">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 203</div>
-                      <span class="status-badge rent">For Rent</span>
+                      <span class="status-badge sale">For Sale</span>
                     </div>
                     <h4 class="flat-type-title">2 BHK Comfort Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-tag" style="color: var(--accent-gold);"></i> <strong>Price:</strong> ₹20,00,000 (20 Lakhs)</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Left)</li>
                       <li><i class="fa-solid fa-wind"></i> <strong>Balcony:</strong> Utility Balcony</li>
                       <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
@@ -1381,11 +1394,11 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Rent / Month</span>
-                      <strong style="color: var(--emerald);">Enquire for Rent</strong>
+                      <span>Sale Price</span>
+                      <strong style="color: var(--accent-gold); font-size: 1.05rem;">₹20,00,000</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 203', '2nd Floor', 'Back View 2 BHK (East Facing with 1 Car + 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 203
+                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 203', '2nd Floor', 'Back View 2 BHK For Sale (Price: ₹20,00,000 / 20 Lakhs with 1 Car + 2 Bike Parking)')">
+                      <i class="fa-brands fa-whatsapp"></i> Buy Flat 203 (₹20L)
                     </button>
                   </div>
                 </div>
@@ -1450,16 +1463,17 @@
               </div>
               <div class="flats-pair-grid">
                 
-                <!-- FLAT 101 -->
-                <div class="flat-card" data-wing="front" data-status="rent">
+                <!-- FLAT 101 (OWNED BY OWNER) -->
+                <div class="flat-card" data-wing="front" data-status="owner">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 101</div>
-                      <span class="status-badge rent">For Rent</span>
+                      <span class="status-badge owner"><i class="fa-solid fa-user-check"></i> Owned by Owner</span>
                     </div>
                     <h4 class="flat-type-title">3 BHK Luxury Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-user-tie"></i> <strong>Status:</strong> Owned by Owner</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Front View (Left)</li>
                       <li><i class="fa-solid fa-sun"></i> <strong>Balcony:</strong> Direct Road Balcony</li>
                       <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
@@ -1467,11 +1481,11 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Rent / Month</span>
-                      <strong style="color: var(--emerald);">Enquire for Rent</strong>
+                      <span>Occupancy</span>
+                      <strong style="color: var(--primary);">Owner Occupied</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 101', '1st Floor', 'Front View 3 BHK (East Facing with 1 Car + 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 101
+                    <button class="btn btn-sm btn-primary" style="background: var(--slate-700); cursor: default;" onclick="enquireFlat('Flat 101', '1st Floor', 'Front View 3 BHK (Owned by Owner)')">
+                      <i class="fa-solid fa-house-user"></i> Owned by Owner
                     </button>
                   </div>
                 </div>
@@ -1513,16 +1527,17 @@
               </div>
               <div class="flats-pair-grid">
                 
-                <!-- FLAT 103 -->
-                <div class="flat-card" data-wing="back" data-status="rent">
+                <!-- FLAT 103 (RESERVED BY OWNER) -->
+                <div class="flat-card" data-wing="back" data-status="reserved">
                   <div>
                     <div class="flat-top-row">
                       <div class="flat-number-box">Flat 103</div>
-                      <span class="status-badge rent">For Rent</span>
+                      <span class="status-badge reserved"><i class="fa-solid fa-bookmark"></i> Reserved by Owner</span>
                     </div>
                     <h4 class="flat-type-title">2 BHK Comfort Flat</h4>
                     <ul class="flat-features-list">
                       <li class="east-highlight"><i class="fa-solid fa-compass"></i> <strong>Facing:</strong> 100% East Facing</li>
+                      <li><i class="fa-solid fa-lock" style="color: #92400e;"></i> <strong>Status:</strong> Reserved by Owner</li>
                       <li><i class="fa-solid fa-eye"></i> <strong>Position:</strong> Back View (Left)</li>
                       <li><i class="fa-solid fa-wind"></i> <strong>Balcony:</strong> Utility Balcony</li>
                       <li class="parking-row" style="background: #ecfdf5; color: #065f46;"><i class="fa-solid fa-car" style="color: #059669;"></i> <strong>Parking:</strong> 1 Car + 2 Bike Parking</li>
@@ -1530,11 +1545,11 @@
                   </div>
                   <div class="flat-bottom">
                     <div class="flat-price-tag">
-                      <span>Rent / Month</span>
-                      <strong style="color: var(--emerald);">Enquire for Rent</strong>
+                      <span>Status</span>
+                      <strong style="color: #92400e;">Reserved by Owner</strong>
                     </div>
-                    <button class="btn btn-sm btn-whatsapp" onclick="enquireFlat('Flat 103', '1st Floor', 'Back View 2 BHK (East Facing with 1 Car + 2 Bike Parking)')">
-                      <i class="fa-brands fa-whatsapp"></i> Enquire Flat 103
+                    <button class="btn btn-sm btn-primary" style="background: #92400e; cursor: default;" onclick="enquireFlat('Flat 103', '1st Floor', 'Back View 2 BHK (Reserved by Owner)')">
+                      <i class="fa-solid fa-bookmark"></i> Reserved by Owner
                     </button>
                   </div>
                 </div>
